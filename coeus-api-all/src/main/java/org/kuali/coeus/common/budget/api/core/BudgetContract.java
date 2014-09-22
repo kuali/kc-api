@@ -25,8 +25,6 @@ public interface BudgetContract extends IdentifiableBudget, DocumentNumbered {
 
     Date getStartDate();
 
-    Boolean getFinalVersionFlag();
-
     String getOhRateTypeCode();
 
     ScaleTwoDecimal getResidualFunds();
