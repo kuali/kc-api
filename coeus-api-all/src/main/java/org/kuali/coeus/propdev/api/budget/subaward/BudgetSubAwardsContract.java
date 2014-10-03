@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.List;
 
 public interface BudgetSubAwardsContract extends IdentifiableSubAwardBudget, HierarchicalProposal {
-    public String getProposalNumber();
     Integer getBudgetVersionNumber();
     String getComments();
     String getOrganizationName();
