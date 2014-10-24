@@ -16,6 +16,8 @@ public interface AnswerContract extends IdentifiableNumeric {
 
     Long getQuestionId();
 
+    Integer getQuestionSeqId();
+
     Long getQuestionnaireQuestionsId();
 
     List<? extends AnswerContract> getParentAnswers();
