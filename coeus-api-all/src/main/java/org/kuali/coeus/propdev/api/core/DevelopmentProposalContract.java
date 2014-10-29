@@ -86,8 +86,6 @@ public interface DevelopmentProposalContract extends NumberedProposal, RecordedU
 
     String getHierarchyBudgetType();
 
-    String getLastSyncedBudgetDocumentNumber();
-
     String getProposalNumberForGG();
 
     String getOpportunityIdForGG();
