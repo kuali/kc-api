@@ -10,12 +10,13 @@ import org.kuali.coeus.common.budget.api.rate.BudgetRateContract;
 import org.kuali.coeus.common.budget.api.rate.RateClassContract;
 import org.kuali.coeus.propdev.api.budget.subaward.BudgetSubAwardsContract;
 import org.kuali.coeus.sys.api.model.DocumentNumbered;
+import org.kuali.coeus.sys.api.model.RecordedCreate;
 import org.kuali.coeus.sys.api.model.ScaleTwoDecimal;
 
 import java.util.Date;
 import java.util.List;
 
-public interface BudgetContract extends IdentifiableBudget, DocumentNumbered {
+public interface BudgetContract extends IdentifiableBudget, DocumentNumbered, RecordedCreate {
 
     Integer getBudgetVersionNumber();
 

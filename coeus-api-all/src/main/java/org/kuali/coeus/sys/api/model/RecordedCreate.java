@@ -1,6 +1,6 @@
 package org.kuali.coeus.sys.api.model;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * This interface can be used to identify a user and timestamp regarding when the object was initially created
@@ -12,7 +12,7 @@ public interface RecordedCreate {
      * The date and time of when the object was last inserted
      * @return the date or null if the object is new
      */
-    Date getCreateTimestamp();
+    Timestamp getCreateTimestamp();
 
     /**
      * The user who last inserted the object
