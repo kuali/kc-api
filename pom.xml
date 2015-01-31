@@ -26,7 +26,7 @@
     </parent>
     <groupId>org.kuali.coeus</groupId>
     <artifactId>coeus-api</artifactId>
-    <version>6.0.0.1</version>
+    <version>6.0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>
         The Kuali Coeus API module contains service apis for the Kuali Coeus application.
@@ -44,7 +44,7 @@
         <connection>scm:git:git@github.com:kuali/kc-api.git</connection>
         <developerConnection>scm:git:git@github.com:kuali/kc-api.git</developerConnection>
         <url>https://github.com/kuali/kc-api/tree/${project.scm.tag}</url>
-        <tag>coeus-api-6.0.0.1</tag>
+        <tag>master</tag>
     </scm>
     <developers>
         <developer>
