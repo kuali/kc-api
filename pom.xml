@@ -19,19 +19,14 @@
  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.kuali.pom</groupId>
-        <artifactId>kuali-common</artifactId>
-        <version>5.0.4</version>
-    </parent>
     <groupId>org.kuali.coeus</groupId>
     <artifactId>coeus-api</artifactId>
-    <version>6.0.1-SNAPSHOT</version>
+    <version>6.0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>
         The Kuali Coeus API module contains service apis for the Kuali Coeus application.
     </description>
-    <url>http://${kuali.site.hostname}/coeus/coeus-api/${project.version}</url>
+    <url>http://kuali.org/kc</url>
     <inceptionYear>2014</inceptionYear>
     <licenses>
         <license>
@@ -40,12 +35,7 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    <scm>
-        <connection>scm:git:git@github.com:kuali/kc-api.git</connection>
-        <developerConnection>scm:git:git@github.com:kuali/kc-api.git</developerConnection>
-        <url>https://github.com/kuali/kc-api/tree/${project.scm.tag}</url>
-        <tag>master</tag>
-    </scm>
+
     <developers>
         <developer>
             <id>kc.dev</id>
@@ -61,22 +51,138 @@
     </prerequisites>
 
     <properties>
-        <project.scm.vendor>git</project.scm.vendor>
         
         <require.maven.version>3.0</require.maven.version>
-        
-        <junit.version>4.11</junit.version>
-        <error_prone_core.version>1.1.2</error_prone_core.version>
-        <plexus-compiler-javac.version>2.3</plexus-compiler-javac.version>
-        <plexus-compiler-javac-errorprone.version>2.3</plexus-compiler-javac-errorprone.version>
+
+        <junit.version>4.12</junit.version>
+
+        <maven-clean-plugin.version>2.6.1</maven-clean-plugin.version>
+        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+        <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
+        <maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
+        <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
+        <maven-scm-provider-gitexe.version>1.9.4</maven-scm-provider-gitexe.version>
+        <maven-release-plugin.version>2.5.1</maven-release-plugin.version>
+        <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
+        <maven-source-plugin.version>2.4</maven-source-plugin.version>
+        <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
+        <wagon.s3.version>1.2.1</wagon.s3.version>
+        <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+        <error_prone_core.version>2.0.2</error_prone_core.version>
+        <plexus-compiler-javac.version>2.5</plexus-compiler-javac.version>
+        <plexus-compiler-javac-errorprone.version>2.5</plexus-compiler-javac-errorprone.version>
+
+        <require.maven.version>3.0</require.maven.version>
+
+        <project.encoding>UTF-8</project.encoding>
+        <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
+
+        <project.java.version>1.7</project.java.version>
+        <!-- These are used by multiple plugins (compiler, javadoc, xref, etc) -->
+        <project.compile.source>${project.java.version}</project.compile.source>
+        <project.compile.target>${project.java.version}</project.compile.target>
 
         <kuali.agpl3.license.url>http://www.gnu.org/licenses/agpl-3.0.txt</kuali.agpl3.license.url>
+
+        <scm.connection>scm:git:git://github.com/kuali/kc-api.git</scm.connection>
+        <scm.developerConnection>scm:git:git@github.com:kuali/kc-api.git</scm.developerConnection>
+        <scm.url>https://github.com/kuali/kc-api</scm.url>
+
+        <issueManagement.system>github</issueManagement.system>
+        <issueManagement.url>https://github.com/kuali/kc-api/issues</issueManagement.url>
+
+        <dm.snapshotRepository.id>kuali.snapshot</dm.snapshotRepository.id>
+        <dm.snapshotRepository.name>Main Kuali Repository</dm.snapshotRepository.name>
+        <dm.snapshotRepository.url>scp://test.kuali.org:/opt/m2/repository</dm.snapshotRepository.url>
+
+        <dm.repository.id>kuali.snapshot</dm.repository.id>
+        <dm.repository.name>Kuali Snapshot Repository</dm.repository.name>
+        <dm.repository.url>s3://maven.kuali.org/snapshot</dm.repository.url>
     </properties>
 
     <modules>
         <module>coeus-api-all</module>
     </modules>
-    
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${maven-clean-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                    <configuration>
+                        <source>${project.compile.source}</source>
+                        <target>${project.compile.target}</target>
+                        <encoding>${project.encoding}</encoding>
+                        <useIncrementalCompilation>false</useIncrementalCompilation>
+                        <fork>true</fork>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven-deploy-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven-install-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven-resources-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${maven-release-plugin.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.scm</groupId>
+                            <artifactId>maven-scm-provider-gitexe</artifactId>
+                            <version>${maven-scm-provider-gitexe.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <extensions>
+            <extension>
+                <groupId>org.kuali.maven.wagons</groupId>
+                <artifactId>maven-s3-wagon</artifactId>
+                <version>${wagon.s3.version}</version>
+            </extension>
+        </extensions>
+    </build>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -86,8 +192,63 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <profiles>
+        <profile>
+            <id>grm</id>
+            <!-- comment out activation section to turn this profile off permanently-->
+            <activation>
+                <property>
+                    <name>!grm.off</name>
+                </property>
+            </activation>
+
+            <properties>
+                <scm.connection>scm:git:git://github.com/kualico/kc-api.git</scm.connection>
+                <scm.developerConnection>scm:git:git@github.com:kualico/kc-api.git</scm.developerConnection>
+                <scm.url>https://github.com/kualico/kc-api</scm.url>
+
+                <issueManagement.system>github</issueManagement.system>
+                <issueManagement.url>https://github.com/kualico/kc-api/issues</issueManagement.url>
+
+                <dm.snapshotRepository.id>rsmart.snapshot.repo</dm.snapshotRepository.id>
+                <dm.snapshotRepository.name>rsmart snapshot repository</dm.snapshotRepository.name>
+                <dm.snapshotRepository.url>s3://rsmart-dev/artifacts/maven/snapshot</dm.snapshotRepository.url>
+
+                <dm.repository.id>rsmart.release.repo</dm.repository.id>
+                <dm.repository.name>rsmart release repository</dm.repository.name>
+                <dm.repository.url>s3://rsmart-dev/artifacts/maven/release</dm.repository.url>
+            </properties>
+
+            <repositories>
+                <repository>
+                    <id>rsmart-dev</id>
+                    <name>rSmart Nexus Repository Manager</name>
+                    <url>https://nexus.rsmart.com/nexus/content/groups/public/</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>rsmart-dev</id>
+                    <name>rSmart Nexus Repository Manager</name>
+                    <url>https://nexus.rsmart.com/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
         <!-- enables the error prone compiler for strict compilation-->
         <profile>
             <id>error-prone</id>
@@ -97,7 +258,7 @@
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-compiler-plugin</artifactId>
-                            <version>${plugin.compiler.version}</version>
+                            <version>${maven-compiler-plugin.version}</version>
                             <configuration>
                                 <source>${project.compile.source}</source>
                                 <target>${project.compile.target}</target>
@@ -129,4 +290,57 @@
             </build>
         </profile>
     </profiles>
+
+    <repositories>
+        <repository>
+            <id>kuali.nexus</id>
+            <name>Kuali Nexus Repository Manager</name>
+            <url>http://nexus.kuali.org/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>kuali.nexus</id>
+            <name>Kuali Nexus Repository Manager</name>
+            <url>http://nexus.kuali.org/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <scm>
+        <connection>${scm.connection}</connection>
+        <developerConnection>${scm.developerConnection}</developerConnection>
+        <url>${scm.url}</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>${dm.snapshotRepository.id}</id>
+            <name>${dm.snapshotRepository.name}</name>
+            <url>${dm.snapshotRepository.url}</url>
+        </snapshotRepository>
+        <repository>
+            <id>${dm.repository.id}</id>
+            <name>${dm.repository.name}</name>
+            <url>${dm.repository.url}</url>
+        </repository>
+    </distributionManagement>
+
+    <issueManagement>
+        <system>${issueManagement.system}</system>
+        <url>${issueManagement.url}</url>
+    </issueManagement>
 </project>
