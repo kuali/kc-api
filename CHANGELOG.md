@@ -1,5 +1,13 @@
 
 
+##CURRENT
+* No Changes
+
+
+##coeus-api-1505.2
+* Move to Java 8
+  * Travis Schneberger on Thu, 23 Apr 2015 15:44:54 -0400 [View Commit](../../commit/f1b2c6cdb193f7f4b46d889dc0f737327fa4123a)
+
 ##coeus-api-1505.1
 * No Changes
 
