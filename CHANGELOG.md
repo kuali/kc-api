@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+* update plugin
+  * Travis Schneeberger on Mon, 20 Jul 2015 09:24:36 -0400 [View Commit](../../commit/6206e7ee3e56c47bdaf2df3012c04d5728d01e63)
+
+##coeus-api-1507.1
 * move to new nexus
   * Travis Schneeberger on Mon, 20 Jul 2015 09:08:25 -0400 [View Commit](../../commit/6dbadd794add4b755815d710c8649526f2afd4bd)
 
