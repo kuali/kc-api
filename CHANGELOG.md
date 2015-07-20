@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+* move to new nexus
+  * Travis Schneeberger on Mon, 20 Jul 2015 09:08:25 -0400 [View Commit](../../commit/6dbadd794add4b755815d710c8649526f2afd4bd)
+
+##coeus-api-1505.3
 * No Changes
 
 
