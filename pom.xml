@@ -67,7 +67,7 @@
         <maven-source-plugin.version>2.4</maven-source-plugin.version>
         <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
-        <error_prone_core.version>2.0.2</error_prone_core.version>
+        <error_prone_core.version>2.0.4</error_prone_core.version>
         <plexus-compiler-javac.version>2.5</plexus-compiler-javac.version>
         <plexus-compiler-javac-errorprone.version>2.5</plexus-compiler-javac-errorprone.version>
 
