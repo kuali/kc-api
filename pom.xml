@@ -21,7 +21,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.kuali.coeus</groupId>
     <artifactId>coeus-api</artifactId>
-    <version>1507.4-SNAPSHOT</version>
+    <version>1508.0004</version>
     <packaging>pom</packaging>
     <description>
         The Kuali Coeus API module contains service apis for the Kuali Coeus application.
@@ -315,7 +315,7 @@
         <connection>${scm.connection}</connection>
         <developerConnection>${scm.developerConnection}</developerConnection>
         <url>${scm.url}</url>
-        <tag>HEAD</tag>
+        <tag>coeus-api-1508.0004</tag>
     </scm>
 
     <distributionManagement>
