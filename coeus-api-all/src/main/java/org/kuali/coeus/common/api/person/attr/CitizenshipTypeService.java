@@ -31,6 +31,8 @@ public interface CitizenshipTypeService {
 	 * is turned off, the value is retrieved from the KC Extended Attributes record for the person. 
 	 * @param proposalPerson
 	 * @return the CitizenshipType for each person. It will return CitizenshipType.NOT_AVAILABLE when unavailable or the citizenship code is not recognized as a valid value.
+	 * @throws java.lang.IllegalArgumentException if the proposalPerson is null
+	 * @throws java.lang.UnsupportedOperationException if the PI_CITIZENSHIP_FROM_CUSTOM_DATA is disabled and getCitizenshipDataFromExternalSource has not been overridden
 	 */
     CitizenshipType getPersonCitizenshipType(ProposalPersonContract proposalPerson);
 
