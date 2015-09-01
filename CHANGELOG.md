@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+* API Documentation changes per expected behavior of exceptions
+  * blackcathacker on Tue, 1 Sep 2015 13:59:27 -0700 [View Commit](../../commit/8094356dda8cba321039c02ceb59bcb9bac80563)
+
+##coeus-api-1509.0001
 * API Changes to support external citizenship sources better
   * blackcathacker on Mon, 31 Aug 2015 18:41:11 -0700 [View Commit](../../commit/01f987550970e5657fe53ea4198ee4563c6d6c17)
 
