@@ -18,6 +18,8 @@
  */
 package org.kuali.coeus.propdev.api.s2s;
 
+import java.util.List;
+
 public interface S2SConfigurationService {
 
     /**
@@ -65,4 +67,15 @@ public interface S2SConfigurationService {
      * @throws java.lang.IllegalArgumentException if the name is blank
      */
     Boolean getValueAsBoolean(String name);
+    
+    /**
+     * This method gets a config values for the s2s application from a config name as a List of Strings.
+     * The name cannot be blank.  This method will return the config values or 
+     * null if the value cannot be found.
+     *
+     * @param name the name to retrieve the value for
+     * @return the configuration values or null
+     * @throws java.lang.IllegalArgumentException if the name is blank
+     */
+    List<String> getValuesFromCommaSeparatedParam(String name);
 }
