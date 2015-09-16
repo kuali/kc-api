@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+*  Add new method in S2SConfigurationService to parse comma separated param values and return as a list
+  * Geo Thomas on Wed, 16 Sep 2015 13:32:08 -0400 [View Commit](../../commit/242879e2a17608f80bb88a8e34b8a361e55bb74b)
+
+##coeus-api-1509.0002
 * API Documentation changes per expected behavior of exceptions
   * blackcathacker on Tue, 1 Sep 2015 13:59:27 -0700 [View Commit](../../commit/8094356dda8cba321039c02ceb59bcb9bac80563)
 
