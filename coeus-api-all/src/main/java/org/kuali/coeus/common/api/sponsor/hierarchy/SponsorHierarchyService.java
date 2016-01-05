@@ -18,6 +18,7 @@
  */
 package org.kuali.coeus.common.api.sponsor.hierarchy;
         
+import org.kuali.coeus.common.api.sponsor.Sponsorable;
         
 public interface SponsorHierarchyService {
     
@@ -53,6 +54,14 @@ public interface SponsorHierarchyService {
       */
     public boolean isSponsorNihMultiplePi(String sponsorCode);
     
+    /**
+     * Checks if a given sponsorable (sponsor or primesponsor) is in the NIH Multiple PI hierarchy for any level.
+     * @param sponsorable the sponsor object.  Cannot be blank.
+     * @return returns true if the sponsorable contains a sponsor code is a "NIH Multiple PI" type
+     * @throws IllegalArgumentException if the sponsorable has neither sponsor nor primesponsor
+     */
+   public boolean isSponsorableNihMultiplePi(Sponsorable sponsorable);
+   
     /**
       * Checks if the sponsor code is a "NIH Other Significant Contributor" type.
       * @param sponsorCode the sponsor code.  Cannot be blank.
