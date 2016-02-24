@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+*  updating existing copyright header
+  * Travis Schneeberger on Wed, 24 Feb 2016 10:04:53 -0500 [View Commit](../../commit/ebecf0ec17d38c1974938d82f55fe4f8ae898596)
+
+##coeus-api-1509.0003
 *  Add new method in S2SConfigurationService to parse comma separated param values and return as a list
   * Geo Thomas on Wed, 16 Sep 2015 13:32:08 -0400 [View Commit](../../commit/242879e2a17608f80bb88a8e34b8a361e55bb74b)
 
