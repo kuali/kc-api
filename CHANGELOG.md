@@ -1,11 +1,17 @@
 
 
 ##CURRENT
-*  updating existing copyright header
+* RESKC-933: updating maven build with profiles and plugin updates
+  * Travis Schneeberger on Tue, 12 Apr 2016 11:34:58 -0400 [View Commit](../../commit/6f1f4059d46404c83d446441ed2de3b5ab70b3d0)
+* RESKC-933: adding new citizen types for PHS 398 Career Development Award Supplemental Form 3.0
+  * Travis Schneeberger on Tue, 12 Apr 2016 11:34:00 -0400 [View Commit](../../commit/5b3b63241474160c300895a0a7013b5d7f417373)
+
+##coeus-api-1602.0001
+* RESKC-1180: updating existing copyright header
   * Travis Schneeberger on Wed, 24 Feb 2016 10:04:53 -0500 [View Commit](../../commit/ebecf0ec17d38c1974938d82f55fe4f8ae898596)
 
 ##coeus-api-1509.0003
-*  Add new method in S2SConfigurationService to parse comma separated param values and return as a list
+* RESKC-842: Add new method in S2SConfigurationService to parse comma separated param values and return as a list
   * Geo Thomas on Wed, 16 Sep 2015 13:32:08 -0400 [View Commit](../../commit/242879e2a17608f80bb88a8e34b8a361e55bb74b)
 
 ##coeus-api-1509.0002
