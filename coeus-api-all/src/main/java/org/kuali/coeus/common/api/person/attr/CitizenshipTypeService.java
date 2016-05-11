@@ -29,7 +29,7 @@ public interface CitizenshipTypeService {
 	 * sources for the data. When the parameter "ALLOW_PROPOSAL_PERSON_TO_OVERRIDE_KC_PERSON_EXTENDED_ATTRIBUTES"
 	 * is set to true, this value will be retrieved from the proposal person record allowing each proposal to override the citizenship type for each person. When this parameter
 	 * is turned off, the value is retrieved from the KC Extended Attributes record for the person. 
-	 * @param proposalPerson
+	 * @param proposalPerson the person.  cannot be null
 	 * @return the CitizenshipType for each person. It will return CitizenshipType.NOT_AVAILABLE when unavailable or the citizenship code is not recognized as a valid value.
 	 * @throws java.lang.IllegalArgumentException if the proposalPerson is null
 	 * @throws java.lang.UnsupportedOperationException if the PI_CITIZENSHIP_FROM_CUSTOM_DATA is disabled and getCitizenshipDataFromExternalSource has not been overridden

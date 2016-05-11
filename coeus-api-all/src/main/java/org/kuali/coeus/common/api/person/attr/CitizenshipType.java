@@ -32,9 +32,9 @@ public enum CitizenshipType {
     TEMP_VISA_ALSO_APPLIED_FOR_PERM_RESIDENT_STATUS("Temporary Visa also applied for permanent resident status"),
     NOT_AVAILABLE("N/A");
 
-    private String citizenShip;
+    private final String citizenShip;
 
-    private CitizenshipType(String citizenShip) {
+    CitizenshipType(String citizenShip) {
         this.citizenShip = citizenShip;
     }
 
