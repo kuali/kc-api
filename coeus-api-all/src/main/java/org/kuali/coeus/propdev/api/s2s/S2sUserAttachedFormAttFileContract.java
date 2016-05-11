@@ -22,7 +22,7 @@ import org.kuali.coeus.sys.api.model.IdentifiableNumeric;
 
 public interface S2sUserAttachedFormAttFileContract extends IdentifiableNumeric {
 	
-    public Long getS2sUserAttachedFormAttId();
+    Long getS2sUserAttachedFormAttId();
     
-    public byte[] getAttachment();
+    byte[] getAttachment();
 }

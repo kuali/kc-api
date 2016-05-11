@@ -24,17 +24,17 @@ import java.util.List;
 
 public interface QuestionnaireContract extends IdentifiableNumeric, Describable, Inactivatable, Named {
 
-    public String getQuestionnaireSeqId();
+    String getQuestionnaireSeqId();
 
-    public Integer getSequenceNumber();
+    Integer getSequenceNumber();
 
-    public String getDocumentNumber();
+    String getDocumentNumber();
 
-    public String getFileName();
+    String getFileName();
 
-    public byte[] getTemplate();
+    byte[] getTemplate();
 
-    public List<? extends QuestionnaireQuestionContract> getQuestionnaireQuestions();
+    List<? extends QuestionnaireQuestionContract> getQuestionnaireQuestions();
 
-    public List<? extends QuestionnaireUsageContract> getQuestionnaireUsages();
+    List<? extends QuestionnaireUsageContract> getQuestionnaireUsages();
 }

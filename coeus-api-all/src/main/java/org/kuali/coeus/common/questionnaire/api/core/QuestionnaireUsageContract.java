@@ -22,17 +22,17 @@ import org.kuali.coeus.sys.api.model.IdentifiableNumeric;
 
 public interface QuestionnaireUsageContract extends IdentifiableNumeric{
 
-    public String getModuleItemCode();
+    String getModuleItemCode();
 
-    public String getModuleSubItemCode();
+    String getModuleSubItemCode();
 
-    public Long getQuestionnaireId();
+    Long getQuestionnaireId();
 
-    public String getRuleId();
+    String getRuleId();
 
-    public String getQuestionnaireLabel();
+    String getQuestionnaireLabel();
 
-    public Integer getQuestionnaireSequenceNumber();
+    Integer getQuestionnaireSequenceNumber();
 
-    public boolean isMandatory();
+    boolean isMandatory();
 }

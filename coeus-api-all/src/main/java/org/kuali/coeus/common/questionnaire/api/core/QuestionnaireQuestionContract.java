@@ -23,23 +23,23 @@ import org.kuali.coeus.sys.api.model.IdentifiableNumeric;
 
 public interface QuestionnaireQuestionContract extends IdentifiableNumeric {
 
-    public Long getQuestionnaireId();
+    Long getQuestionnaireId();
 
-    public Long getQuestionId();
+    Long getQuestionId();
 
-    public Integer getQuestionNumber();
+    Integer getQuestionNumber();
 
-    public Integer getParentQuestionNumber();
+    Integer getParentQuestionNumber();
 
-    public boolean getConditionFlag();
+    boolean getConditionFlag();
 
-    public String getCondition();
+    String getCondition();
 
-    public String getConditionValue();
+    String getConditionValue();
 
-    public Integer getQuestionSeqNumber();
+    Integer getQuestionSeqNumber();
 
-    public String getRuleId();
+    String getRuleId();
 
-    public QuestionContract getQuestion();
+    QuestionContract getQuestion();
 }
