@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+* RESKC-1729: changing appointment type to use a decimal type for duration
+  * Travis Schneeberger on Thu, 15 Dec 2016 15:24:58 -0500 [View Commit](../../commit/96b733b3f286c1a81fb4e231a054c0f97ffd9c85)
+
+##coeus-api-1611.0001
 * No Changes
 
 
