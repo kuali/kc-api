@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+* RESKC-2178: adding s2s form configuration interfaces
+  * Travis Schneeberger on Wed, 10 May 2017 09:24:15 -0400 [View Commit](../../commit/0f63d4f7f94d224d94bcfdb1247a1a186d8e2e3e)
+
+##coeus-api-1702.0001
 * RESKC-1961: update TbnPerson interface
   * Travis Schneeberger on Mon, 27 Feb 2017 11:36:18 -0500 [View Commit](../../commit/dcf38b2ea285053e69373661f1d207b66fe76b85)
 
