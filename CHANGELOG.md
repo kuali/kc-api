@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+* RESKC-1797: adding lobbying registrant and lobbying individual to organization contract
+  * Travis Schneeberger on Mon, 15 May 2017 16:27:31 -0400 [View Commit](../../commit/c797ac2b417cc810c1393996d438f3b4a05be81f)
+
+##coeus-api-1705.0001
 * RESKC-2178: adding s2s form configuration interfaces
   * Travis Schneeberger on Wed, 10 May 2017 09:24:15 -0400 [View Commit](../../commit/0f63d4f7f94d224d94bcfdb1247a1a186d8e2e3e)
 
