@@ -40,6 +40,10 @@ public interface OrganizationContract {
 
     Integer getCognizantAuditor();
 
+    Integer getLobbyingRegistrant();
+
+    Integer getLobbyingIndividual();
+
     String getComGovEntityCode();
 
     String getCongressionalDistrict();
