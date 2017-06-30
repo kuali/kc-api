@@ -39,4 +39,11 @@ public interface OrganizationIndirectcostContract {
     Date getRequestedDate();
 
     Date getStartDate();
+
+    String getFederalApprovingAgency();
+
+    String getFederalApprovingAgencyName();
+
+    String getRestrictedRatePolicy();
+
 }
