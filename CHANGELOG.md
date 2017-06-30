@@ -1,6 +1,10 @@
 
 
 ##CURRENT
+* RESKC-1792: Adding required fields
+  * Gayathri Athreya on Thu, 29 Jun 2017 18:01:22 -0700 [View Commit](../../commit/ab773eaaaa0d66b22d58e560ccebf3a07b1eb7df)
+
+##coeus-api-1705.0002
 * RESKC-1797: adding lobbying registrant and lobbying individual to organization contract
   * Travis Schneeberger on Mon, 15 May 2017 16:27:31 -0400 [View Commit](../../commit/c797ac2b417cc810c1393996d438f3b4a05be81f)
 
