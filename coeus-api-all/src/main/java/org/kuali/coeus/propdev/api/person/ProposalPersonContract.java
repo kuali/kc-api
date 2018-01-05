@@ -173,6 +173,8 @@ public interface ProposalPersonContract extends ProposalPersonLink, Hierarchical
     
     String getDivision();
 
+    Long getNsfId();
+
     CitizenshipTypeContract getCitizenshipType();
 
     ProposalInvestigatorCertificationContract getCertification();

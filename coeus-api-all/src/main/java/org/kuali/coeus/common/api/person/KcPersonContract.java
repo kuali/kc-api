@@ -143,7 +143,9 @@ public interface KcPersonContract extends Inactivatable {
 
     String getEraCommonsUserName();
 
-    String getIdentifier(); 
+    String getIdentifier();
+
+    Long getNsfId();
 
     UnitContract getUnit();
 
