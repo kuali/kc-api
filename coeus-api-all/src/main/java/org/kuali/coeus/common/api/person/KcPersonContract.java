@@ -145,7 +145,7 @@ public interface KcPersonContract extends Inactivatable {
 
     String getIdentifier();
 
-    Long getNsfId();
+    String getNsfId();
 
     UnitContract getUnit();
 
