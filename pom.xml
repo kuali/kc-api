@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-   - Kuali Coeus, a comprehensive research administration system for higher education.
-   - 
-   - Copyright 2005-2016 Kuali, Inc.
-   - 
-   - This program is free software: you can redistribute it and/or modify
-   - it under the terms of the GNU Affero General Public License as
-   - published by the Free Software Foundation, either version 3 of the
-   - License, or (at your option) any later version.
-   - 
-   - This program is distributed in the hope that it will be useful,
-   - but WITHOUT ANY WARRANTY; without even the implied warranty of
-   - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   - GNU Affero General Public License for more details.
-   - 
-   - You should have received a copy of the GNU Affero General Public License
-   - along with this program.  If not, see <http://www.gnu.org/licenses />.
+   - Copyright © 2005-2018 Kuali, Inc.
+   - All Rights Reserved
+   - You may use and modify this code under the terms of the Kuali, Inc.
+   - Pre-Release License Agreement. You may not distribute it.
+   -
+   - You should have received a copy of the Kuali, Inc. Pre-Release License
+   - Agreement with this file. If not, please write to license@kuali.co.
  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -31,7 +22,7 @@
     <licenses>
         <license>
             <name>GNU Affero General Public License, Version 3</name>
-            <url>${kuali.agpl3.license.url}</url>
+            <url>${kuali.license}</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -79,7 +70,7 @@
         <project.compile.source>${project.java.version}</project.compile.source>
         <project.compile.target>${project.java.version}</project.compile.target>
 
-        <kuali.agpl3.license.url>http://www.gnu.org/licenses/agpl-3.0.txt</kuali.agpl3.license.url>
+        <kuali.license>PRE-RELEASE LICENSE AGREEMENT</kuali.license>
 
         <scm.connection>scm:git:git://github.com/kuali/kc-api.git</scm.connection>
         <scm.developerConnection>scm:git:git@github.com:kuali/kc-api.git</scm.developerConnection>
