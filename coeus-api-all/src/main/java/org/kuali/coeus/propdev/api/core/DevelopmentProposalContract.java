@@ -27,6 +27,7 @@ import org.kuali.coeus.propdev.api.s2s.S2sAppSubmissionContract;
 import org.kuali.coeus.propdev.api.s2s.S2sOppFormsContract;
 import org.kuali.coeus.propdev.api.s2s.S2sOpportunityContract;
 import org.kuali.coeus.propdev.api.s2s.S2sUserAttachedFormContract;
+import org.kuali.coeus.propdev.api.s2s.override.S2sOverrideContract;
 import org.kuali.coeus.propdev.api.specialreview.ProposalSpecialReviewContract;
 import org.kuali.coeus.propdev.api.state.ProposalStateContract;
 import org.kuali.coeus.propdev.api.ynq.ProposalYnqContract;
@@ -166,4 +167,6 @@ public interface DevelopmentProposalContract extends NumberedProposal, RecordedU
     List<? extends ProposalPersonContract> getInvestigators();
 
     Boolean getGrantsGovSelectFlag();
+
+    S2sOverrideContract getS2sOverride();
 }
