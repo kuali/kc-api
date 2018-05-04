@@ -1,6 +1,10 @@
 
 
 ## CURRENT
+* RESKC-2884: add apis for s2s override functionality
+  * Travis Schneeberger on Thu, 3 May 2018 18:38:07 -0400 [View Commit](../../commit/38a2aa60485d86a72562f645089a722a033c808e)
+
+## coeus-api-1801.0003
 * RESKC-2703: License and pom
   * Gayathri Athreya on Tue, 16 Jan 2018 08:53:46 -0700 [View Commit](../../commit/8e538d70f5e5f705d73eb64b87630db792eb83d1)
 * RESKC-2703: Java and xml files only
