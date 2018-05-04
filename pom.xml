@@ -252,7 +252,7 @@
             </activation>
 
             <properties>
-                <maven-jdeps-plugin.version>3.1.1</maven-jdeps-plugin.version>
+                <maven-jdeps-plugin.version>3.0.0</maven-jdeps-plugin.version>
             </properties>
             <build>
                 <pluginManagement>
