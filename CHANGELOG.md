@@ -1,6 +1,10 @@
 
 
 ## CURRENT
+* RESKC-2884: add apis for s2s override functionality for aor info
+  * Travis Schneeberger on Tue, 15 May 2018 11:06:23 -0600 [View Commit](../../commit/0f7e836f523dd070da84ef4ecbf9d2dfaa7aff03)
+
+## coeus-api-1805.0002
 * No Changes
 
 
