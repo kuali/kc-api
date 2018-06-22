@@ -29,6 +29,7 @@ import org.kuali.coeus.propdev.api.s2s.S2sOpportunityContract;
 import org.kuali.coeus.propdev.api.s2s.S2sUserAttachedFormContract;
 import org.kuali.coeus.propdev.api.s2s.override.S2sOverrideContract;
 import org.kuali.coeus.propdev.api.specialreview.ProposalSpecialReviewContract;
+import org.kuali.coeus.propdev.api.sponsor.ProposalCfdaContract;
 import org.kuali.coeus.propdev.api.state.ProposalStateContract;
 import org.kuali.coeus.propdev.api.ynq.ProposalYnqContract;
 import org.kuali.coeus.sys.api.model.RecordedUpdate;
@@ -53,8 +54,6 @@ public interface DevelopmentProposalContract extends NumberedProposal, RecordedU
     String getDeadlineTime();
 
     String getDeadlineType();
-
-    String getCfdaNumber();
 
     String getProgramAnnouncementNumber();
 
@@ -169,4 +168,6 @@ public interface DevelopmentProposalContract extends NumberedProposal, RecordedU
     Boolean getGrantsGovSelectFlag();
 
     S2sOverrideContract getS2sOverride();
+
+    List<? extends ProposalCfdaContract> getProposalCfdas();
 }

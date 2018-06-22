@@ -7,13 +7,13 @@
  */
 package org.kuali.coeus.propdev.api.budget.editable;
 
-public interface BudgetChangedDataContract {
+import org.kuali.coeus.propdev.api.core.NumberedProposal;
+
+public interface BudgetChangedDataContract extends NumberedProposal {
 
     Integer getChangeNumber();
 
     String getColumnName();
-
-    String getProposalNumber();
 
     String getChangedValue();
     

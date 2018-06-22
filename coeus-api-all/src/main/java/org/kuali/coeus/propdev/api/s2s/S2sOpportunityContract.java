@@ -14,8 +14,6 @@ import java.util.List;
 
 public interface S2sOpportunityContract extends NumberedProposal {
 
-    String getCfdaNumber();
-
     Calendar getClosingDate();
 
     String getCompetetionId();
@@ -40,8 +38,6 @@ public interface S2sOpportunityContract extends NumberedProposal {
 
     String getAgencyContactInfo();
 
-    String getCfdaDescription();
-
     boolean isMultiProject();
 
     S2sProviderContract getS2sProvider();
@@ -51,4 +47,6 @@ public interface S2sOpportunityContract extends NumberedProposal {
     S2sSubmissionTypeContract getS2sSubmissionType();
 
     List<? extends S2sOppFormsContract> getS2sOppForms();
+
+    List<? extends S2sOpportunityCfdaContract> getS2sOpportunityCfdas();
 }

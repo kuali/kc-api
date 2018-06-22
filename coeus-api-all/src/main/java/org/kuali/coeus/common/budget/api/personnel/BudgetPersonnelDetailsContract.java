@@ -9,11 +9,12 @@ package org.kuali.coeus.common.budget.api.personnel;
 
 import org.kuali.coeus.common.budget.api.core.IdentifiableBudget;
 import org.kuali.coeus.sys.api.model.ScaleTwoDecimal;
+import org.kuali.coeus.sys.api.model.Sequenceable;
 
 import java.util.Date;
 import java.util.List;
 
-public interface BudgetPersonnelDetailsContract extends IdentifiableBudget {
+public interface BudgetPersonnelDetailsContract extends IdentifiableBudget, Sequenceable {
 
     Long getBudgetPersonnelLineItemId();
 
@@ -52,9 +53,7 @@ public interface BudgetPersonnelDetailsContract extends IdentifiableBudget {
     String getPersonId();
     
     ScaleTwoDecimal getSalaryRequested();
-    
-    Integer getSequenceNumber();
-    
+
     Integer getPersonSequenceNumber();
     
     ScaleTwoDecimal getUnderrecoveryAmount();

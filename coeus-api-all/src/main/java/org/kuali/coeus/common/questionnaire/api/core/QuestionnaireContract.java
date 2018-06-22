@@ -11,13 +11,9 @@ import org.kuali.coeus.sys.api.model.*;
 
 import java.util.List;
 
-public interface QuestionnaireContract extends IdentifiableNumeric, Describable, Inactivatable, Named {
+public interface QuestionnaireContract extends IdentifiableNumeric, Describable, Inactivatable, Named, DocumentNumbered, Sequenceable {
 
     String getQuestionnaireSeqId();
-
-    Integer getSequenceNumber();
-
-    String getDocumentNumber();
 
     String getFileName();
 
