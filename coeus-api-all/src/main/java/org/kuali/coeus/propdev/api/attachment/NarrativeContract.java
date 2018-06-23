@@ -7,13 +7,12 @@
  */
 package org.kuali.coeus.propdev.api.attachment;
 
+import org.kuali.coeus.propdev.api.core.NumberedProposal;
 import org.kuali.coeus.propdev.api.hierarchy.HierarchicalProposal;
 
 import java.util.List;
 
-public interface NarrativeContract extends HierarchicalProposal {
-
-     String getProposalNumber();
+public interface NarrativeContract extends HierarchicalProposal, NumberedProposal {
 
      Integer getModuleNumber();
 

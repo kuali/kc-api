@@ -7,13 +7,13 @@
  */
 package org.kuali.coeus.propdev.api.editable;
 
-public interface ProposalChangedDataContract {
+import org.kuali.coeus.propdev.api.core.NumberedProposal;
+
+public interface ProposalChangedDataContract extends NumberedProposal {
 
     Integer getChangeNumber();
 
     String getColumnName();
-
-    String getProposalNumber();
 
     String getChangedValue();
     
