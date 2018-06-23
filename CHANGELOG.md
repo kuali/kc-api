@@ -1,6 +1,10 @@
 
 
 ## CURRENT
+* RESKC-2339: update api to support multiple cfda numbers, general cleanup
+  * Travis Schneeberger on Fri, 22 Jun 2018 19:37:24 -0400 [View Commit](../../commit/d3b46489e67d07168459f76858f303ab72e59508)
+
+## coeus-api-1805.0003
 * RESKC-2884: add apis for s2s override functionality for aor info
   * Travis Schneeberger on Tue, 15 May 2018 11:06:23 -0600 [View Commit](../../commit/0f7e836f523dd070da84ef4ecbf9d2dfaa7aff03)
 
