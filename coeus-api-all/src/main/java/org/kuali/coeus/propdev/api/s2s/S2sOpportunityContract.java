@@ -14,9 +14,13 @@ import java.util.List;
 
 public interface S2sOpportunityContract extends NumberedProposal {
 
+    String getPackageId();
+
     Calendar getClosingDate();
 
-    String getCompetetionId();
+    String getCompetitionId();
+
+    String getCompetitionTitle();
 
     String getInstructionUrl();
 
@@ -30,6 +34,9 @@ public interface S2sOpportunityContract extends NumberedProposal {
 
     String getOpportunityId();
 
+    /**
+     * alias of fundingOpportunityTitle
+     */
     String getOpportunityTitle();
 
     String getFundingOpportunityNumber();
