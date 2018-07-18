@@ -1,6 +1,10 @@
 
 
 ## CURRENT
+* RESKC-2339: update api to support new s2s header
+  * Travis Schneeberger on Wed, 18 Jul 2018 15:14:32 -0400 [View Commit](../../commit/cfb17329460f6fe9e7d210c716262d339abf9042)
+
+## coeus-api-1806.0001
 * RESKC-2339: update api to support multiple cfda numbers, general cleanup
   * Travis Schneeberger on Fri, 22 Jun 2018 19:37:24 -0400 [View Commit](../../commit/d3b46489e67d07168459f76858f303ab72e59508)
 
