@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.kuali.coeus</groupId>
         <artifactId>coeus-api</artifactId>
-        <version>1807.0003</version>
+        <version>1807.0004-SNAPSHOT</version>
     </parent>
     <artifactId>coeus-api-all</artifactId>
     
