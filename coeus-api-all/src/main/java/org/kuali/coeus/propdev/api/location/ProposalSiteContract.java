@@ -28,4 +28,17 @@ public interface ProposalSiteContract extends NumberedProposal {
     List<? extends CongressionalDistrictContract> getCongressionalDistricts();
 
     String getFirstCongressionalDistrictName();
+
+    String getAddressLine1();
+
+    String getAddressLine2();
+
+    String getAddressLine3();
+
+    String getCity();
+
+    String getState();
+
+    String getPostalCode();
+
 }
