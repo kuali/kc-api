@@ -37,8 +37,11 @@ public interface ProposalSiteContract extends NumberedProposal {
 
     String getCity();
 
+    String getCounty();
+
     String getState();
 
     String getPostalCode();
 
+    String getCountryCode();
 }
