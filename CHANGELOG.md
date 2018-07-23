@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-21: Add more Rolodex fields to ProposalSiteContract API. (#31)
+
+  * Omar Soto Fortuño on Mon, 23 Jul 2018 12:08:52 -0400 [View Commit](../../commit/b84984f11a68fd50ea000025caf81408cf91c8d9)
+
+## coeus-api-1807.0004
 * No Changes
 
 
