@@ -9,7 +9,6 @@ package org.kuali.coeus.common.budget.api.period;
 
 import org.kuali.coeus.common.budget.api.core.IdentifiableBudget;
 import org.kuali.coeus.common.budget.api.nonpersonnel.BudgetLineItemContract;
-import org.kuali.coeus.propdev.api.budget.modular.BudgetModularContract;
 import org.kuali.coeus.sys.api.model.ScaleTwoDecimal;
 
 import java.util.Date;
@@ -44,6 +43,4 @@ public interface BudgetPeriodContract extends IdentifiableBudget {
     Integer getNumberOfParticipants();
     
     ScaleTwoDecimal getDirectCostLimit();
-    
-    BudgetModularContract getBudgetModular();
 }
