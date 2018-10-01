@@ -1,6 +1,8 @@
 
 
 ## CURRENT
+* RESKC-3207: attempting to not explicitly specify the git scm dependency
+  * Travis Schneeberger on Mon, 1 Oct 2018 16:19:19 -0400 [View Commit](../../commit/a02b2d6e0cba4319851ab404efaa017ce55b7127)
 * RESKC-3207: downgrading jdeps
   * Travis Schneeberger on Mon, 1 Oct 2018 15:58:34 -0400 [View Commit](../../commit/720aa14e132291ff5ad99ba36443d932f7518e05)
 * RESKC-3207: update testing libs, plugins to latest
