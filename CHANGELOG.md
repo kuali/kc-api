@@ -1,6 +1,12 @@
 
 
 ## CURRENT
+* RESKC-3207: downgrading jdeps
+  * Travis Schneeberger on Mon, 1 Oct 2018 15:58:34 -0400 [View Commit](../../commit/720aa14e132291ff5ad99ba36443d932f7518e05)
+* RESKC-3207: update testing libs, plugins to latest
+  * Travis Schneeberger on Mon, 1 Oct 2018 15:45:33 -0400 [View Commit](../../commit/dd53ff1f3a3f82fee417fbe6351a6ebee4f46935)
+
+## coeus-api-1808.0002
 * RESKC-2457: Use `ModularBudgetService` to get modular amounts instead of just the Budget object
   * Jeff Largent on Tue, 7 Aug 2018 15:29:38 -0400 [View Commit](../../commit/05fc4f9c0f479f0a659cee27ef41b27514adb9a4)
 
