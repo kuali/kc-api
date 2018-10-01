@@ -45,20 +45,19 @@
         
         <require.maven.version>3.0</require.maven.version>
 
-        <junit.version>5.2.0</junit.version>
-        <junit.platform.version>1.2.0</junit.platform.version>
+        <junit.version>5.3.1</junit.version>
 
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
         <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
-        <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
         <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
-        <maven-scm-provider-gitexe.version>1.9.4</maven-scm-provider-gitexe.version>
+        <maven-scm-provider-gitexe.version>1.11.1</maven-scm-provider-gitexe.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-        <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
 
         <require.maven.version>3.0</require.maven.version>
 
@@ -159,13 +158,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven-surefire-plugin.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.junit.platform</groupId>
-                            <artifactId>junit-platform-surefire-provider</artifactId>
-                            <version>${junit.platform.version}</version>
-                        </dependency>
-                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -252,7 +244,7 @@
             </activation>
 
             <properties>
-                <maven-jdeps-plugin.version>3.0.0</maven-jdeps-plugin.version>
+                <maven-jdeps-plugin.version>3.1.1</maven-jdeps-plugin.version>
             </properties>
             <build>
                 <pluginManagement>
@@ -293,8 +285,8 @@
 
             <properties>
                 <error_prone_core.version>2.3.1</error_prone_core.version>
-                <plexus-compiler-javac.version>2.8.1</plexus-compiler-javac.version>
-                <plexus-compiler-javac-errorprone.version>2.8.1</plexus-compiler-javac-errorprone.version>
+                <plexus-compiler-javac.version>2.8.5</plexus-compiler-javac.version>
+                <plexus-compiler-javac-errorprone.version>2.8.5</plexus-compiler-javac-errorprone.version>
             </properties>
             <build>
                 <pluginManagement>
