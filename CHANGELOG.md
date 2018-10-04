@@ -1,6 +1,12 @@
 
 
 ## CURRENT
+* Revert "RESKC-3207: specifying the new release argument"
+  * Travis Schneeberger on Thu, 4 Oct 2018 13:02:45 -0400 [View Commit](../../commit/2a3b29da867266e9c244bd368c92f6c9a7edc28b)
+* RESKC-3207: specifying the new release argument
+  * Travis Schneeberger on Thu, 4 Oct 2018 12:48:04 -0400 [View Commit](../../commit/ec28220cdf4374584218c69863e9d05c9aa5b8b1)
+
+## coeus-api-1810.0001
 * RESKC-3207: attempting to not explicitly specify the git scm dependency
   * Travis Schneeberger on Mon, 1 Oct 2018 16:19:19 -0400 [View Commit](../../commit/a02b2d6e0cba4319851ab404efaa017ce55b7127)
 * RESKC-3207: downgrading jdeps
