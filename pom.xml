@@ -68,7 +68,6 @@
         <!-- These are used by multiple plugins (compiler, javadoc, xref, etc) -->
         <project.compile.source>${project.java.version}</project.compile.source>
         <project.compile.target>${project.java.version}</project.compile.target>
-        <project.compile.release>${project.java.version}</project.compile.release>
 
         <kuali.license>PRE-RELEASE LICENSE AGREEMENT</kuali.license>
 
@@ -107,7 +106,6 @@
                     <configuration>
                         <source>${project.compile.source}</source>
                         <target>${project.compile.target}</target>
-                        <release>${project.compile.release}</release>
                         <encoding>${project.encoding}</encoding>
                         <useIncrementalCompilation>false</useIncrementalCompilation>
                         <fork>true</fork>
@@ -293,7 +291,6 @@
                                 <useIncrementalCompilation>false</useIncrementalCompilation>
                                 <source>${project.compile.source}</source>
                                 <target>${project.compile.target}</target>
-                                <release>${project.compile.release}</release>
                                 <encoding>${project.encoding}</encoding>
                                 <compilerId>javac-with-errorprone</compilerId>
                                 <forceJavacCompilerUse>true</forceJavacCompilerUse>
