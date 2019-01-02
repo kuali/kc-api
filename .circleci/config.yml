@@ -26,4 +26,4 @@ jobs:
       - run: mvn -B -e -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
 
       - store_test_results:
-          path: target/surefire-reports
+          path: coeus-api-all/target/surefire-reports
