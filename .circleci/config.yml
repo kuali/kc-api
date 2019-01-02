@@ -16,11 +16,11 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: mvn dependency:go-offline
+      - run: mvn -s .circleci/settings.xml dependency:go-offline
 
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      - run: mvn -B -s ./settings.xml clean compile javadoc:jar install -Denforce-project-quality
+      - run: mvn -B -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
