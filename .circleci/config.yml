@@ -23,7 +23,7 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      - run: mvn -B -e -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
+      - run: mvn -B -o -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
 
       - store_test_results:
           path: coeus-api-all/target/surefire-reports
