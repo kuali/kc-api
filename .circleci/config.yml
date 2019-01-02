@@ -23,4 +23,4 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      - run: mvn -B -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
+      - run: mvn -B -e -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
