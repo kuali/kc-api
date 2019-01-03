@@ -158,6 +158,25 @@
                     <artifactId>go-offline-maven-plugin</artifactId>
                     <version>${go-offline-maven-plugin.version}</version>
                     <configuration>
+                        <dynamicDependencies>
+                            <DynamicDependency>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-javadoc-plugin</artifactId>
+                                <version>${maven-javadoc-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>                            <DynamicDependency>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-release-plugin</artifactId>
+                                <version>${maven-release-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
+                            <DynamicDependency>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-source-plugin</artifactId>
+                                <version>${maven-source-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
+                        </dynamicDependencies>
                         <downloadSources>true</downloadSources>
                         <downloadJavadoc>true</downloadJavadoc>
                     </configuration>
