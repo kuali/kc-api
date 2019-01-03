@@ -16,17 +16,22 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: mvn -s .circleci/settings.xml de.qaware.maven:go-offline-maven-plugin:resolve-dependencies -Denforce-project-quality
-      - run: mvn -s .circleci/settings.xml org.apache.maven.plugins:maven-dependency-plugin:resolve-plugins -Denforce-project-quality
+      - run:
+          name: Downloading Dependencies and Plugins
+          command: |
+            mvn -s .circleci/settings.xml de.qaware.maven:go-offline-maven-plugin:resolve-dependencies -Denforce-project-quality
+            mvn -s .circleci/settings.xml org.apache.maven.plugins:maven-dependency-plugin:resolve-plugins -Denforce-project-quality
 
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      - run: mvn -B -o -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
       - run:
-          name: Release application
+          name: Running Static Analysis and Tests
+          command: mvn -B -o -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
+      - run:
+          name: Releasing Application
           command: |
             git config --global user.email "${GIT_USER_EMAIL}"
             git config --global user.name "${GIT_USER_NAME}"
