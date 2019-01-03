@@ -42,7 +42,7 @@ jobs:
             CURRENT_YM=`date +%y%m`
             if [ $PROJECT_VER_YM == $CURRENT_YM ]; then RELEASE_VERSION=`echo $CURRENT_VERSION | cut -c 1-9`; else RELEASE_VERSION=`echo $CURRENT_YM`.0001; fi
 
-            mvn -B -o -s .circleci/settings.xml clean release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -DscmCommentPrefix="[maven-release-plugin] [skip ci] #norelease " -Dpassword=${GITHUB_AUTHTOKEN}
+            mvn -B -o -s .circleci/settings.xml clean release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -DscmCommentPrefix="[maven-release-plugin] [skip ci] #norelease " -Dusername=${GITHUB_AUTHTOKEN}
 
       - store_test_results:
           path: coeus-api-all/target/surefire-reports
