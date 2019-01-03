@@ -51,7 +51,7 @@ workflows:
   version: 2.1
   test_and_release:
     jobs:
-      - test_and_release
+      - test_and_release:
           filters:
             branches:
               only: master
