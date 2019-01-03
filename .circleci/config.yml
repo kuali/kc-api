@@ -24,24 +24,25 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      - run: |
-        mvn -B -o -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
+      - run: mvn -B -o -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
+      - run:
+          name: Release application
+          command: |
+            git config --global user.email "${GIT_USER_EMAIL}"
+            git config --global user.name "${GIT_USER_NAME}"
 
-        git config --global user.email "${GIT_USER_EMAIL}"
-        git config --global user.name "${GIT_USER_NAME}"
+            git clone https://${GITHUB_AUTHTOKEN}@github.com/KualiCo/research-scripts ../research-scripts
 
-        git clone https://${GITHUB_AUTHTOKEN}@github.com/KualiCo/research-scripts ../research-scripts
+            bash ../research-scripts/generate_changelog.sh
+            git add CHANGELOG.md
+            git commit -m "KualiCo Release Notes #norelease [skip ci]" || echo
 
-        bash ../research-scripts/generate_changelog.sh
-        git add CHANGELOG.md
-        git commit -m "KualiCo Release Notes #norelease [skip ci]" || echo
+            CURRENT_VERSION=`mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.version -q -DforceStdout`
+            PROJECT_VER_YM=`echo $CURRENT_VERSION | cut -c 1-4`
+            CURRENT_YM=`date +%y%m`
+            if [ $PROJECT_VER_YM == $CURRENT_YM ]; then RELEASE_VERSION=`echo $CURRENT_VERSION | cut -c 1-9`; else RELEASE_VERSION=`echo $CURRENT_YM`.0001; fi
 
-        CURRENT_VERSION=`mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.version -q -DforceStdout`
-        PROJECT_VER_YM=`echo $CURRENT_VERSION | cut -c 1-4`
-        CURRENT_YM=`date +%y%m`
-        if [ $PROJECT_VER_YM == $CURRENT_YM ]; then RELEASE_VERSION=`echo $CURRENT_VERSION | cut -c 1-9`; else RELEASE_VERSION=`echo $CURRENT_YM`.0001; fi
-
-        mvn -B -o clean release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -DscmCommentPrefix="[maven-release-plugin] [skip ci] #norelease " -Dpassword=${GITHUB_AUTHTOKEN} -DdryRun=true
+            mvn -B -o -s .circleci/settings.xml clean release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -DscmCommentPrefix="[maven-release-plugin] [skip ci] #norelease " -Dpassword=${GITHUB_AUTHTOKEN} -DdryRun=true
 
       - store_test_results:
           path: coeus-api-all/target/surefire-reports
