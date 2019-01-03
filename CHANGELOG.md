@@ -1,75 +1,57 @@
 
 
 ## CURRENT
-* Revert "RESKC-3207: specifying the new release argument"
-  * Travis Schneeberger on Thu, 4 Oct 2018 13:02:45 -0400 [View Commit](../../commit/2a3b29da867266e9c244bd368c92f6c9a7edc28b)
-* RESKC-3207: specifying the new release argument
-  * Travis Schneeberger on Thu, 4 Oct 2018 12:48:04 -0400 [View Commit](../../commit/ec28220cdf4374584218c69863e9d05c9aa5b8b1)
+* RESKC-3328: changing the scm url (#55)
 
-## coeus-api-1810.0001
-* RESKC-3207: attempting to not explicitly specify the git scm dependency
-  * Travis Schneeberger on Mon, 1 Oct 2018 16:19:19 -0400 [View Commit](../../commit/a02b2d6e0cba4319851ab404efaa017ce55b7127)
-* RESKC-3207: downgrading jdeps
-  * Travis Schneeberger on Mon, 1 Oct 2018 15:58:34 -0400 [View Commit](../../commit/720aa14e132291ff5ad99ba36443d932f7518e05)
-* RESKC-3207: update testing libs, plugins to latest
-  * Travis Schneeberger on Mon, 1 Oct 2018 15:45:33 -0400 [View Commit](../../commit/dd53ff1f3a3f82fee417fbe6351a6ebee4f46935)
+  * Travis Schneeberger on Thu, 3 Jan 2019 17:29:51 -0500 [View Commit](../../commit/bcedc0c1fb2c758b0d656019c5a75acf6c6f6ba1)
+* RESKC-3328: changing the scm url (#54)
 
-## coeus-api-1808.0002
-* RESKC-2457: Use `ModularBudgetService` to get modular amounts instead of just the Budget object
-  * Jeff Largent on Tue, 7 Aug 2018 15:29:38 -0400 [View Commit](../../commit/05fc4f9c0f479f0a659cee27ef41b27514adb9a4)
+  * Travis Schneeberger on Thu, 3 Jan 2019 17:19:18 -0500 [View Commit](../../commit/809edbd87691534e8226566a2509c68926305b9f)
+* RESKC-3328: removing dry-run flag (#53)
 
-## coeus-api-1808.0001
-* No Changes
+  * Travis Schneeberger on Thu, 3 Jan 2019 16:47:55 -0500 [View Commit](../../commit/6d165c334f0c0a67b5a2a9d5e0baadea12d322f8)
+* RESKC-3328: adding circleci artifacts, updating plugin and maven info (#52)
 
+  * Travis Schneeberger on Thu, 3 Jan 2019 16:44:58 -0500 [View Commit](../../commit/32821fbb37914f24fc1bcdd53c0648a21e1898b9)
+* RESKC-3328: fixing yaml (#51)
 
-## coeus-api-1807.0005
-* RESKC-21: Add more Rolodex fields to ProposalSiteContract API. (#31)
+  * Travis Schneeberger on Thu, 3 Jan 2019 16:35:14 -0500 [View Commit](../../commit/b5082dbdfa7da80361f7546305a39f9e7244fe7e)
+* RESKC-3328: adding workflow (#50)
 
-  * Omar Soto Fortuño on Mon, 23 Jul 2018 12:08:52 -0400 [View Commit](../../commit/b84984f11a68fd50ea000025caf81408cf91c8d9)
+  * Travis Schneeberger on Thu, 3 Jan 2019 16:30:19 -0500 [View Commit](../../commit/f29accdfa1a19fa50e22a71f1344a2bef1a9cc12)
+* RESKC-3328: fixing yaml (#49)
 
-## coeus-api-1807.0004
-* No Changes
+  * Travis Schneeberger on Thu, 3 Jan 2019 16:08:32 -0500 [View Commit](../../commit/dea00c26fc163d6d17ddfc0c36dbdd60e4c4eead)
+* RESKC-3328: attempting offline mode (#48)
 
+  * Travis Schneeberger on Thu, 3 Jan 2019 15:45:12 -0500 [View Commit](../../commit/b42961bb38c2919fc0c1e775b58a88ec5d3e1f82)
+* RESKC-3328: attempting offline mode (#47)
 
-## coeus-api-1807.0003
-* RESKC-21: Add Rolodex fields to ProposalSiteContract API. (#30)
+  * Travis Schneeberger on Thu, 3 Jan 2019 10:39:26 -0500 [View Commit](../../commit/1d6853b2ab1dbdb47367c378fc42a39d7fbad21c)
+* RESKC-3328: attempting offline mode (#46)
 
-  * Omar Soto Fortuño on Fri, 20 Jul 2018 08:38:51 -0400 [View Commit](../../commit/4cb2657f2c275ad1e7e037e00e60a329ea192652)
+  * Travis Schneeberger on Thu, 3 Jan 2019 10:34:05 -0500 [View Commit](../../commit/f119e5461d92346f8a3e2a8b218ba800f0872473)
+* RESKC-3328: attempting offline mode (#45)
 
-## coeus-api-1807.0002
-* No Changes
+  * Travis Schneeberger on Thu, 3 Jan 2019 10:22:47 -0500 [View Commit](../../commit/74f095b7effa86fdc061b37fa8e1209eca44d6e6)
+* RESKC-3328: attempting offline mode (#44)
 
+  * Travis Schneeberger on Wed, 2 Jan 2019 14:05:08 -0500 [View Commit](../../commit/df3ee8a97edb3c3157d56826d74173cdbcc53ed3)
+* RESKC-3328: adding the submodule for test results (#43)
 
-## coeus-api-1807.0001
-* RESKC-2339: update api to support new s2s header
-  * Travis Schneeberger on Wed, 18 Jul 2018 15:14:32 -0400 [View Commit](../../commit/cfb17329460f6fe9e7d210c716262d339abf9042)
+  * Travis Schneeberger on Wed, 2 Jan 2019 13:51:06 -0500 [View Commit](../../commit/eaa0de4950321bb3a9b4db4086b1ef4d3097030a)
+* RESKC-3328: adding caching for multi-project structures, saving test results (#42)
 
-## coeus-api-1806.0001
-* RESKC-2339: update api to support multiple cfda numbers, general cleanup
-  * Travis Schneeberger on Fri, 22 Jun 2018 19:37:24 -0400 [View Commit](../../commit/d3b46489e67d07168459f76858f303ab72e59508)
+  * Travis Schneeberger on Wed, 2 Jan 2019 13:42:43 -0500 [View Commit](../../commit/d303fb3db0a9b4a9119943f65907af2c07adb333)
+* RESKC-3328: debugging circle ci issues (#41)
 
-## coeus-api-1805.0003
-* RESKC-2884: add apis for s2s override functionality for aor info
-  * Travis Schneeberger on Tue, 15 May 2018 11:06:23 -0600 [View Commit](../../commit/0f7e836f523dd070da84ef4ecbf9d2dfaa7aff03)
+  * Travis Schneeberger on Wed, 2 Jan 2019 11:58:39 -0500 [View Commit](../../commit/a8fdf8212fba7a56fd5d1efafb8da7019df29065)
+* RESKC-3328: updating settings path (#40)
 
-## coeus-api-1805.0002
-* No Changes
+  * Travis Schneeberger on Wed, 2 Jan 2019 11:50:12 -0500 [View Commit](../../commit/9714c4734b9fa06236238cdbeaa574c8f601541d)
+* RESKC-3328: updating settings path (#39)
 
+  * Travis Schneeberger on Wed, 2 Jan 2019 11:31:01 -0500 [View Commit](../../commit/5126f5aa6b4583c3708c6cd3f6af385dc6f3bc3b)
+* RESKC-3328: adding circleci POC artifacts, updating plugins and deps (#38)
 
-## coeus-api-1805.0001
-* RESKC-2884: add apis for s2s override functionality
-  * Travis Schneeberger on Thu, 3 May 2018 18:38:07 -0400 [View Commit](../../commit/38a2aa60485d86a72562f645089a722a033c808e)
-
-## coeus-api-1801.0003
-* RESKC-2703: License and pom
-  * Gayathri Athreya on Tue, 16 Jan 2018 08:53:46 -0700 [View Commit](../../commit/8e538d70f5e5f705d73eb64b87630db792eb83d1)
-* RESKC-2703: Java and xml files only
-  * Gayathri Athreya on Mon, 15 Jan 2018 14:26:21 -0700 [View Commit](../../commit/62298588ccf3f02d77843ab04698acd4890b952b)
-
-## coeus-api-1801.0002
-* RESKC-2688: Converting to String
-  * Gayathri Athreya on Tue, 9 Jan 2018 08:28:57 -0700 [View Commit](../../commit/52f739acaac65702c357d2e0866908426c2c2a5a)
-
-## coeus-api-1801.0001
-* Add ndfId to contract
-  * Gayathri Athreya on Fri, 5 Jan 2018 10:05:57 -0700 [View Commit](../../commit/8fc8e01ec1b627b1c12480a30c79edd6a3b76b55)
+  * Travis Schneeberger on Wed, 2 Jan 2019 11:17:18 -0500 [View Commit](../../commit/89f32b09a9d2fef071cf66924b6570dc5f8bbd38)
