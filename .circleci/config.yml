@@ -46,3 +46,12 @@ jobs:
 
       - store_test_results:
           path: coeus-api-all/target/surefire-reports
+
+workflows:
+  version: 2.1
+  test_and_release:
+    jobs:
+      - test_and_release
+          filters:
+            branches:
+              only: master
