@@ -176,6 +176,12 @@
                                 <version>${maven-source-plugin.version}</version>
                                 <repositoryType>PLUGIN</repositoryType>
                             </DynamicDependency>
+                            <DynamicDependency>
+                                <groupId>org.apache.maven.surefire</groupId>
+                                <artifactId>surefire-junit-platform</artifactId>
+                                <version>${maven-surefire-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
                         </dynamicDependencies>
                         <downloadSources>true</downloadSources>
                         <downloadJavadoc>true</downloadJavadoc>
