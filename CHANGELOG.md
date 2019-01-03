@@ -1,11 +1,14 @@
 
 
 ## CURRENT
+* RESKC-3328: adding more nexus repos, cleaning up circle file (#57)
+
+  * Travis Schneeberger on Thu, 3 Jan 2019 18:25:29 -0500 [View Commit](../../commit/21236bf5b16b25db74864070c9fdbcd532992e5a)
+
+## coeus-api-1901.0002
 * RESKC-3328: removing offline mode (#56)
 
   * Travis Schneeberger on Thu, 3 Jan 2019 17:34:21 -0500 [View Commit](../../commit/297ad357c24280c013afeb66c03cadc6e2bfb559)
-
-## coeus-api-1901.0001
 * RESKC-3328: changing the scm url (#55)
 
   * Travis Schneeberger on Thu, 3 Jan 2019 17:29:51 -0500 [View Commit](../../commit/bcedc0c1fb2c758b0d656019c5a75acf6c6f6ba1)
