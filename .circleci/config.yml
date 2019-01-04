@@ -1,5 +1,38 @@
 version: 2.1
 jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/repo
+    environment:
+      MAVEN_OPTS: -Xmx500m
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - org.kuali.coeus:coeus-api-{{ checksum "pom.xml" }}
+            # fallback to using the latest cache if no exact match is found
+            - org.kuali.coeus:coeus-api-
+
+      - run:
+          name: Downloading Dependencies and Plugins
+          command: |
+            mvn -s .circleci/settings.xml de.qaware.maven:go-offline-maven-plugin:resolve-dependencies -Denforce-project-quality
+            mvn -s .circleci/settings.xml org.apache.maven.plugins:maven-dependency-plugin:resolve-plugins -Denforce-project-quality
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: org.kuali.coeus:coeus-api-{{ checksum "pom.xml" }}
+
+      - run:
+          name: Running Static Analysis and Tests
+          command: mvn -B -o -s .circleci/settings.xml clean compile javadoc:jar install -Denforce-project-quality
+
+      - store_test_results:
+          path: coeus-api-all/target/surefire-reports
   test_and_release:
     docker:
       - image: circleci/openjdk:8-jdk
@@ -12,9 +45,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "pom.xml" }}
+            - org.kuali.coeus:coeus-api-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+            - org.kuali.coeus:coeus-api-
 
       - run:
           name: Downloading Dependencies and Plugins
@@ -25,7 +58,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.m2
-          key: v1-dependencies-{{ checksum "pom.xml" }}
+          key: org.kuali.coeus:coeus-api-{{ checksum "pom.xml" }}
 
       - run:
           name: Running Static Analysis and Tests
