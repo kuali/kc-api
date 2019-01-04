@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-3328: adding build step (#59)
+
+  * Travis Schneeberger on Fri, 4 Jan 2019 10:15:43 -0500 [View Commit](../../commit/32117b91be5bc174e456416f80e05cbdc6ea5798)
+
+## coeus-api-1901.0003
 * RESKC-3328: adding more nexus repos, cleaning up circle file (#57)
 
   * Travis Schneeberger on Thu, 3 Jan 2019 18:25:29 -0500 [View Commit](../../commit/21236bf5b16b25db74864070c9fdbcd532992e5a)
