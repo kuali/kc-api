@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-   - Copyright © 2005-2018 Kuali, Inc.
-   - All Rights Reserved
-   - You may use and modify this code under the terms of the Kuali, Inc.
-   - Pre-Release License Agreement. You may not distribute it.
-   -
-   - You should have received a copy of the Kuali, Inc. Pre-Release License
-   - Agreement with this file. If not, please write to license@kuali.co.
- -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.kuali.coeus</groupId>
@@ -17,25 +8,12 @@
     <description>
         The Kuali Coeus API module contains service apis for the Kuali Coeus application.
     </description>
-    <url>http://kuali.org/kc</url>
+    <url>https://www.kuali.co/products/research/</url>
     <inceptionYear>2014</inceptionYear>
-    <licenses>
-        <license>
-            <name>GNU Affero General Public License, Version 3</name>
-            <url>${kuali.license}</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <id>kc.dev</id>
-            <name>Kuali Coeus Developers</name>
-            <organization>Kuali</organization>
-            <timezone>-7</timezone>
-            <email>kc.dev@kuali.org</email>
-        </developer>
-    </developers>
+    <organization>
+        <name>Kuali, Inc.</name>
+        <url>https://www.kuali.co/</url>
+    </organization>
 
     <properties>
 
@@ -62,8 +40,6 @@
         <!-- These are used by multiple plugins (compiler, javadoc, xref, etc) -->
         <project.compile.source>${project.java.version}</project.compile.source>
         <project.compile.target>${project.java.version}</project.compile.target>
-
-        <kuali.license>PRE-RELEASE LICENSE AGREEMENT</kuali.license>
 
         <scm.connection>scm:git:https://github.com/kuali/kc-api</scm.connection>
         <scm.developerConnection>scm:git:https://github.com/kuali/kc-api</scm.developerConnection>
@@ -164,7 +140,8 @@
                                 <artifactId>maven-javadoc-plugin</artifactId>
                                 <version>${maven-javadoc-plugin.version}</version>
                                 <repositoryType>PLUGIN</repositoryType>
-                            </DynamicDependency>                            <DynamicDependency>
+                            </DynamicDependency>
+                            <DynamicDependency>
                                 <groupId>org.apache.maven.plugins</groupId>
                                 <artifactId>maven-release-plugin</artifactId>
                                 <version>${maven-release-plugin.version}</version>
@@ -203,6 +180,52 @@
     </dependencyManagement>
 
     <profiles>
+        <profile>
+            <id>license</id>
+            <properties>
+                <license-maven-plugin.version>1.16</license-maven-plugin.version>
+
+                <license.name>pre_release</license.name>
+                <!-- the resolver needs a uri but the template does not.  Just a regular file path -->
+                <license.resolver>file://${maven.multiModuleProjectDirectory}/src/license</license.resolver>
+                <license.description.template>${maven.multiModuleProjectDirectory}/src/license/header-description.ftl</license.description.template>
+            </properties>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.codehaus.mojo</groupId>
+                            <artifactId>license-maven-plugin</artifactId>
+                            <version>${license-maven-plugin.version}</version>
+                            <executions>
+                                <execution>
+                                    <id>update-license-header</id>
+                                    <goals>
+                                        <goal>update-file-header</goal>
+                                    </goals>
+                                    <phase>process-sources</phase>
+                                </execution>
+                            </executions>
+                            <configuration>
+                                <licenseName>${license.name}</licenseName>
+                                <licenseResolver>${license.resolver}</licenseResolver>
+                                <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
+                                <descriptionTemplate>${license.description.template}</descriptionTemplate>
+                                <canUpdateCopyright>true</canUpdateCopyright>
+                                <copyrightOwners>Kuali, Inc. - All Rights Reserved</copyrightOwners>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>license-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
         <profile>
             <id>grm</id>
             <!-- comment out activation section to turn this profile off permanently-->
