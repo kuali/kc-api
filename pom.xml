@@ -41,8 +41,8 @@
         <project.compile.source>${project.java.version}</project.compile.source>
         <project.compile.target>${project.java.version}</project.compile.target>
 
-        <scm.connection>scm:git:https://github.com/kuali/kc-api</scm.connection>
-        <scm.developerConnection>scm:git:https://github.com/kuali/kc-api</scm.developerConnection>
+        <scm.connection>scm:git:git://github.com/kuali/kc-api.git</scm.connection>
+        <scm.developerConnection>scm:git:git@github.com:kuali/kc-api.git</scm.developerConnection>
         <scm.url>https://github.com/kuali/kc-api</scm.url>
 
         <issueManagement.system>github</issueManagement.system>
@@ -236,8 +236,8 @@
             </activation>
 
             <properties>
-                <scm.connection>scm:git:https://github.com/kualico/kc-api</scm.connection>
-                <scm.developerConnection>scm:git:https://github.com/kualico/kc-api</scm.developerConnection>
+                <scm.connection>scm:git:git://github.com/kualico/kc-api.git</scm.connection>
+                <scm.developerConnection>scm:git:git@github.com:kualico/kc-api.git</scm.developerConnection>
                 <scm.url>https://github.com/kualico/kc-api</scm.url>
 
                 <issueManagement.system>github</issueManagement.system>
