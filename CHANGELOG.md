@@ -1,6 +1,18 @@
 
 
 ## CURRENT
+* No Changes
+
+
+## coeus-api-1902.0003
+* License (#62)
+
+* RESKC-3416: adding maven profile and configuration to generate licence header
+  * 
+* RESKC-3416: removing existing license headers
+  * Travis Schneeberger on Mon, 4 Feb 2019 18:59:49 -0500 [View Commit](../../commit/0f4d6a8844cd63c6c31adcc27beb00fe28b3d11a)
+
+## coeus-api-1901.0004
 * RESKC-3328: adding build step (#59)
 
   * Travis Schneeberger on Fri, 4 Jan 2019 10:15:43 -0500 [View Commit](../../commit/32117b91be5bc174e456416f80e05cbdc6ea5798)
