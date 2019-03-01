@@ -1,10 +1,11 @@
 
 
 ## CURRENT
-* No Changes
+* RESKC-3462: Adding new fields to S2sOpportunityContract (#64)
 
+  * Joe Wiggins on Fri, 1 Mar 2019 08:12:55 -0700 [View Commit](../../commit/b4f0200846bc4b4faf00398f2dd5a5bc90f80ba2)
 
-## coeus-api-1902.0003
+## coeus-api-1902.0005
 * License (#62)
 
 * RESKC-3416: adding maven profile and configuration to generate licence header
