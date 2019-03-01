@@ -53,6 +53,12 @@ public interface S2sOpportunityContract extends NumberedProposal {
 
     boolean isMultiProject();
 
+    String getComponentType();
+
+    String getOverallSchemaUrl();
+
+    String getOverallSchema();
+
     S2sProviderContract getS2sProvider();
 
     S2sRevisionTypeContract getS2sRevisionType();
