@@ -1,6 +1,14 @@
 
 
 ## CURRENT
+* RESKC-3360: add java 11 feature (#65)
+
+  * Travis Schneeberger on Tue, 5 Mar 2019 11:47:24 -0500 [View Commit](../../commit/2c491f3a8976b3a8e5fa47eb5329591ccf2608ab)
+* RESKC-3360: Increase Java requirement to Java 11 (#61)
+
+  * Travis Schneeberger on Tue, 5 Mar 2019 11:13:10 -0500 [View Commit](../../commit/8cb39187e46ff04b4d06e5c96b0199d5ce4dd7cc)
+
+## coeus-api-1903.0001
 * RESKC-3462: Adding new fields to S2sOpportunityContract (#64)
 
   * Joe Wiggins on Fri, 1 Mar 2019 08:12:55 -0700 [View Commit](../../commit/b4f0200846bc4b4faf00398f2dd5a5bc90f80ba2)
