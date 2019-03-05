@@ -17,14 +17,13 @@
 
     <properties>
 
-        <junit.version>5.3.2</junit.version>
+        <junit.version>5.4.0</junit.version>
 
-        <go-offline-maven-plugin.version>1.1.0</go-offline-maven-plugin.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
         <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
         <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
-        <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
@@ -36,10 +35,9 @@
         <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
 
-        <project.java.version>1.8</project.java.version>
-        <!-- These are used by multiple plugins (compiler, javadoc, xref, etc) -->
-        <project.compile.source>${project.java.version}</project.compile.source>
-        <project.compile.target>${project.java.version}</project.compile.target>
+        <project.java.version>11</project.java.version>
+        <project.compiler.version>${project.java.version}</project.compiler.version>
+        <project.compiler.release>${project.java.version}</project.compiler.release>
 
         <scm.connection>scm:git:git://github.com/kuali/kc-api.git</scm.connection>
         <scm.developerConnection>scm:git:git@github.com:kuali/kc-api.git</scm.developerConnection>
@@ -74,10 +72,9 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <source>${project.compile.source}</source>
-                        <target>${project.compile.target}</target>
-                        <encoding>${project.encoding}</encoding>
                         <useIncrementalCompilation>false</useIncrementalCompilation>
+                        <release>${project.compiler.release}</release>
+                        <compilerVersion>${project.compiler.version}</compilerVersion>
                         <fork>true</fork>
                     </configuration>
                 </plugin>
@@ -129,41 +126,6 @@
                         <useSystemClassLoader>false</useSystemClassLoader>
                     </configuration>
                 </plugin>
-                <plugin>
-                    <groupId>de.qaware.maven</groupId>
-                    <artifactId>go-offline-maven-plugin</artifactId>
-                    <version>${go-offline-maven-plugin.version}</version>
-                    <configuration>
-                        <dynamicDependencies>
-                            <DynamicDependency>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-javadoc-plugin</artifactId>
-                                <version>${maven-javadoc-plugin.version}</version>
-                                <repositoryType>PLUGIN</repositoryType>
-                            </DynamicDependency>
-                            <DynamicDependency>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-release-plugin</artifactId>
-                                <version>${maven-release-plugin.version}</version>
-                                <repositoryType>PLUGIN</repositoryType>
-                            </DynamicDependency>
-                            <DynamicDependency>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-source-plugin</artifactId>
-                                <version>${maven-source-plugin.version}</version>
-                                <repositoryType>PLUGIN</repositoryType>
-                            </DynamicDependency>
-                            <DynamicDependency>
-                                <groupId>org.apache.maven.surefire</groupId>
-                                <artifactId>surefire-junit-platform</artifactId>
-                                <version>${maven-surefire-plugin.version}</version>
-                                <repositoryType>PLUGIN</repositoryType>
-                            </DynamicDependency>
-                        </dynamicDependencies>
-                        <downloadSources>true</downloadSources>
-                        <downloadJavadoc>true</downloadJavadoc>
-                    </configuration>
-                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -183,7 +145,7 @@
         <profile>
             <id>license</id>
             <properties>
-                <license-maven-plugin.version>1.16</license-maven-plugin.version>
+                <license-maven-plugin.version>1.19</license-maven-plugin.version>
 
                 <license.name>pre_release</license.name>
                 <!-- the resolver needs a uri but the template does not.  Just a regular file path -->
@@ -281,11 +243,12 @@
             </pluginRepositories>
         </profile>
 
+        <!-- NOT compatible to JDK 11 -->
         <!--
         uses the java jdk jdeps tool to confirm no internal jdk apis are used.  Some of these apis will be removed in
         later versions of java.
         -->
-        <profile>
+        <!--<profile>
             <id>jdeps</id>
 
             <activation>
@@ -295,7 +258,7 @@
             </activation>
 
             <properties>
-                <maven-jdeps-plugin.version>3.0.0</maven-jdeps-plugin.version>
+                <maven-jdeps-plugin.version>3.1.1</maven-jdeps-plugin.version>
             </properties>
             <build>
                 <pluginManagement>
@@ -323,7 +286,7 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>
+        </profile>-->
 
         <!-- enables the error prone compiler for strict compilation -->
         <profile>
@@ -335,9 +298,7 @@
             </activation>
 
             <properties>
-                <error_prone_core.version>2.3.2</error_prone_core.version>
-                <plexus-compiler-javac.version>2.8.5</plexus-compiler-javac.version>
-                <plexus-compiler-javac-errorprone.version>2.8.5</plexus-compiler-javac-errorprone.version>
+                <error_prone_core.version>2.3.3</error_prone_core.version>
             </properties>
             <build>
                 <pluginManagement>
@@ -348,29 +309,25 @@
                             <version>${maven-compiler-plugin.version}</version>
                             <configuration>
                                 <useIncrementalCompilation>false</useIncrementalCompilation>
-                                <source>${project.compile.source}</source>
-                                <target>${project.compile.target}</target>
-                                <encoding>${project.encoding}</encoding>
-                                <compilerId>javac-with-errorprone</compilerId>
-                                <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                                <release>${project.compiler.release}</release>
+                                <compilerVersion>${project.compiler.version}</compilerVersion>
+                                <showDeprecation>true</showDeprecation>
+                                <showWarnings>true</showWarnings>
+                                <compilerArgument>-parameters</compilerArgument>
+                                <compilerArgs>
+                                    <arg>-Xlint:all</arg>
+                                    <arg>-Xlint:-processing</arg>
+                                    <arg>-XDcompilePolicy=simple</arg>
+                                    <arg>-Xplugin:ErrorProne</arg>
+                                </compilerArgs>
+                                <annotationProcessorPaths>
+                                    <path>
+                                        <groupId>com.google.errorprone</groupId>
+                                        <artifactId>error_prone_core</artifactId>
+                                        <version>${error_prone_core.version}</version>
+                                    </path>
+                                </annotationProcessorPaths>
                             </configuration>
-                            <dependencies>
-                                <dependency>
-                                    <groupId>com.google.errorprone</groupId>
-                                    <artifactId>error_prone_core</artifactId>
-                                    <version>${error_prone_core.version}</version>
-                                </dependency>
-                                <dependency>
-                                    <groupId>org.codehaus.plexus</groupId>
-                                    <artifactId>plexus-compiler-javac</artifactId>
-                                    <version>${plexus-compiler-javac.version}</version>
-                                </dependency>
-                                <dependency>
-                                    <groupId>org.codehaus.plexus</groupId>
-                                    <artifactId>plexus-compiler-javac-errorprone</artifactId>
-                                    <version>${plexus-compiler-javac-errorprone.version}</version>
-                                </dependency>
-                            </dependencies>
                         </plugin>
                     </plugins>
                 </pluginManagement>
