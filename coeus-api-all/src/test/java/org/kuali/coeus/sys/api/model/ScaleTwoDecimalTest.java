@@ -24,7 +24,7 @@ class ScaleTwoDecimalTest {
 
     @Test
     void divideTest() {
-        BigDecimal op1 = new ScaleTwoDecimal(100).bigDecimalValue();
+        var op1 = new ScaleTwoDecimal(100).bigDecimalValue();
         BigDecimal op2 = new ScaleTwoDecimal(365).bigDecimalValue();
         Assertions.assertEquals(new ScaleTwoDecimal(op1.divide(op2, RoundingMode.HALF_UP)),new ScaleTwoDecimal(100d/365d));
     }
