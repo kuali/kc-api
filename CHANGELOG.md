@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-3679: adding another way to fetch deps just to be safe (#69)
+
+  * Travis Schneeberger on Wed, 8 May 2019 14:34:09 -0400 [View Commit](../../commit/9ecc8cdcd530faee1fda7a37ec2ec5c5e3cb4a0c)
+
+## coeus-api-1905.0002
 * RESKC-3679: adding error prone dependency for offline mode (#68)
 
   * Travis Schneeberger on Wed, 8 May 2019 12:50:04 -0400 [View Commit](../../commit/ac2bc2c75dced840092dd327dfb174223d1ff6b3)
