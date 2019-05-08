@@ -19,6 +19,7 @@
 
         <junit.version>5.4.2</junit.version>
 
+        <error_prone_core.version>2.3.3</error_prone_core.version>
         <go-offline-maven-plugin.version>1.1.0</go-offline-maven-plugin.version>
         <license-maven-plugin.version>1.20</license-maven-plugin.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
@@ -99,6 +100,12 @@
                                 <groupId>org.codehaus.mojo</groupId>
                                 <artifactId>license-maven-plugin</artifactId>
                                 <version>${license-maven-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
+                            <DynamicDependency>
+                                <groupId>com.google.errorprone</groupId>
+                                <artifactId>error_prone_core</artifactId>
+                                <version>${error_prone_core.version}</version>
                                 <repositoryType>PLUGIN</repositoryType>
                             </DynamicDependency>
                         </dynamicDependencies>
@@ -427,9 +434,6 @@
                 </property>
             </activation>
 
-            <properties>
-                <error_prone_core.version>2.3.3</error_prone_core.version>
-            </properties>
             <build>
                 <pluginManagement>
                     <plugins>
