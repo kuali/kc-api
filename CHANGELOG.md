@@ -1,6 +1,14 @@
 
 
 ## CURRENT
+* RESKC-3679: adding error prone dependency for offline mode (#68)
+
+  * Travis Schneeberger on Wed, 8 May 2019 12:50:04 -0400 [View Commit](../../commit/ac2bc2c75dced840092dd327dfb174223d1ff6b3)
+* RESKC-3679: converting to circleci (#67)
+
+  * Travis Schneeberger on Wed, 8 May 2019 12:19:43 -0400 [View Commit](../../commit/03b90b40a0eb377c671ea9ff9c6a06de51ea37f0)
+
+## coeus-api-1905.0001
 * No Changes
 
 
