@@ -1,0 +1,54 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/kc-api
+    docker:
+      - image: circleci/openjdk:11-jdk-browsers
+    steps:
+      - checkout
+      - run:
+          name: Normalizing pom.xml for Cache Key
+          command: |
+            sudo apt-get install xmlstarlet
+            mkdir target
+            # we need to strip out the version number before hashing the pom.xml because each time we do a release the version increments even if the dependencies are the same
+            xmlstarlet ed -N pom=http://maven.apache.org/POM/4.0.0 -u "/pom:project/pom:version" -v CACHE-VERSION pom.xml > target/pom.xml.cache
+      - restore_cache:
+          key: kc-api-{{ checksum "target/pom.xml.cache" }}
+      - run:
+          name: Downloading Dependencies and Plugins
+          command: |
+            mvn -s .circleci/settings.xml de.qaware.maven:go-offline-maven-plugin:resolve-dependencies -Denforce-project-quality
+            mvn -s .circleci/settings.xml org.apache.maven.plugins:maven-dependency-plugin:resolve-plugins -Denforce-project-quality
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: kc-api-{{ checksum "target/pom.xml.cache" }}
+      - run:
+          name: Running Tests and Static Analysis
+          command: mvn -o -s .circleci/settings.xml -Denforce-project-quality package
+      - store_test_results:
+          path: target/surefire-reports
+      - deploy:
+          name: Executing Maven Release [if building master]
+          command: |
+            # if not a pull request and is master branch lets do a release
+            if [[ !$CIRCLE_PULL_REQUEST && $CIRCLE_BRANCH == "master" ]]; then
+              git config --global user.email "${GIT_USER_EMAIL}"
+              git config --global user.name "${GIT_USER_NAME}"
+              git clone https://${GITHUB_AUTHTOKEN}@github.com/KualiCo/research-scripts ../research-scripts
+              sh ../research-scripts/generate_changelog.sh
+              git add CHANGELOG.md
+              git commit -m "Release Notes #norelease [skip ci]" || echo
+
+              mvn -s .circleci/settings.xml process-sources -Plicense
+              git add .
+              git commit -m "Update License Headers #norelease [skip ci]" || echo
+
+              CURRENT_VERSION=`mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.version -q -DforceStdout`
+              PROJECT_VER_YM=`echo $CURRENT_VERSION | cut -c 1-4`
+              CURRENT_YM=`date +%y%m`
+              if [ $PROJECT_VER_YM == $CURRENT_YM ]; then RELEASE_VERSION=`echo $CURRENT_VERSION | cut -c 1-9`; else RELEASE_VERSION=`echo $CURRENT_YM`.0001; fi
+              # cannot use offline mode for the release plugin
+              mvn -B -s .circleci/settings.xml clean -DskipTests -Darguments=-DskipTests release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -DscmCommentPrefix="[maven-release-plugin] [skip ci] #norelease " -Dusername=${GITHUB_AUTHTOKEN}
+            fi

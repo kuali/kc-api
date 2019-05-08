@@ -17,8 +17,10 @@
 
     <properties>
 
-        <junit.version>5.4.0</junit.version>
+        <junit.version>5.4.2</junit.version>
 
+        <go-offline-maven-plugin.version>1.1.0</go-offline-maven-plugin.version>
+        <license-maven-plugin.version>1.20</license-maven-plugin.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
         <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
@@ -27,9 +29,10 @@
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+        <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
         <project.encoding>UTF-8</project.encoding>
         <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
@@ -39,9 +42,9 @@
         <project.compiler.version>${project.java.version}</project.compiler.version>
         <project.compiler.release>${project.java.version}</project.compiler.release>
 
-        <scm.connection>scm:git:git://github.com/kuali/kc-api.git</scm.connection>
-        <scm.developerConnection>scm:git:git@github.com:kuali/kc-api.git</scm.developerConnection>
-        <scm.url>https://github.com/kuali/kc-api</scm.url>
+        <scm.connection>scm:git:https://github.com/kuali/kc-api</scm.connection>
+        <scm.developerConnection>scm:git:https://github.com/kuali/kc-api</scm.developerConnection>
+        <scm.url>scm:git:https://github.com/kuali/kc-api</scm.url>
 
         <issueManagement.system>github</issueManagement.system>
         <issueManagement.url>https://github.com/kuali/kc-api/issues</issueManagement.url>
@@ -62,6 +65,47 @@
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>de.qaware.maven</groupId>
+                    <artifactId>go-offline-maven-plugin</artifactId>
+                    <version>${go-offline-maven-plugin.version}</version>
+                    <configuration>
+                        <dynamicDependencies>
+                            <DynamicDependency>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-javadoc-plugin</artifactId>
+                                <version>${maven-javadoc-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
+                            <DynamicDependency>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-release-plugin</artifactId>
+                                <version>${maven-release-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
+                            <DynamicDependency>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-source-plugin</artifactId>
+                                <version>${maven-source-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
+                            <DynamicDependency>
+                                <groupId>org.apache.maven.surefire</groupId>
+                                <artifactId>surefire-junit-platform</artifactId>
+                                <version>${maven-surefire-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
+                            <DynamicDependency>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>license-maven-plugin</artifactId>
+                                <version>${license-maven-plugin.version}</version>
+                                <repositoryType>PLUGIN</repositoryType>
+                            </DynamicDependency>
+                        </dynamicDependencies>
+                        <downloadSources>true</downloadSources>
+                        <downloadJavadoc>true</downloadJavadoc>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
@@ -115,6 +159,11 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>${maven-site-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>${maven-source-plugin.version}</version>
                 </plugin>
@@ -143,10 +192,91 @@
 
     <profiles>
         <profile>
+            <id>enforcer</id>
+
+            <activation>
+                <property>
+                    <name>enforce-project-quality</name>
+                </property>
+            </activation>
+
+            <properties>
+                <extra-enforcer-rules.version>1.2</extra-enforcer-rules.version>
+                <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
+                <ossindex-maven-enforcer-rules.version>3.0.4</ossindex-maven-enforcer-rules.version>
+                <enforcer.require.java.version>${project.java.version}</enforcer.require.java.version>
+                <enforcer.max.jdk.version>${project.java.version}</enforcer.max.jdk.version>
+                <enforcer.phase>validate</enforcer.phase>
+            </properties>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-enforcer-plugin</artifactId>
+                            <version>${maven-enforcer-plugin.version}</version>
+                            <executions>
+                                <execution>
+                                    <id>enforcer-rules</id>
+                                    <goals>
+                                        <goal>enforce</goal>
+                                    </goals>
+                                    <phase>${enforcer.phase}</phase>
+                                    <configuration>
+                                        <rules>
+                                            <banCircularDependencies />
+                                            <banDuplicatePomDependencyVersions />
+                                            <banVulnerable implementation="org.sonatype.ossindex.maven.enforcer.BanVulnerableDependencies" />
+                                            <DependencyConvergence />
+                                            <enforceBytecodeVersion>
+                                                <maxJdkVersion>${enforcer.max.jdk.version}</maxJdkVersion>
+                                            </enforceBytecodeVersion>
+                                            <requireJavaVersion>
+                                                <version>${enforcer.require.java.version}</version>
+                                            </requireJavaVersion>
+                                            <requireMavenVersion>
+                                                <version>[3.3,4.0)</version>
+                                            </requireMavenVersion>
+                                            <requirePluginVersions>
+                                                <message>Best Practice is to always define plugin versions!</message>
+                                                <banLatest>true</banLatest>
+                                                <banRelease>true</banRelease>
+                                                <banSnapshots>true</banSnapshots>
+                                                <phases>clean,install,deploy,release</phases>
+                                            </requirePluginVersions>
+                                        </rules>
+                                        <fail>true</fail>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                            <dependencies>
+                                <dependency>
+                                    <groupId>org.codehaus.mojo</groupId>
+                                    <artifactId>extra-enforcer-rules</artifactId>
+                                    <version>${extra-enforcer-rules.version}</version>
+                                </dependency>
+
+                                <dependency>
+                                    <groupId>org.sonatype.ossindex.maven</groupId>
+                                    <artifactId>ossindex-maven-enforcer-rules</artifactId>
+                                    <version>${ossindex-maven-enforcer-rules.version}</version>
+                                </dependency>
+                            </dependencies>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
             <id>license</id>
             <properties>
-                <license-maven-plugin.version>1.19</license-maven-plugin.version>
-
                 <license.name>pre_release</license.name>
                 <!-- the resolver needs a uri but the template does not.  Just a regular file path -->
                 <license.resolver>file://${maven.multiModuleProjectDirectory}/src/license</license.resolver>
@@ -198,9 +328,9 @@
             </activation>
 
             <properties>
-                <scm.connection>scm:git:git://github.com/kualico/kc-api.git</scm.connection>
-                <scm.developerConnection>scm:git:git@github.com:kualico/kc-api.git</scm.developerConnection>
-                <scm.url>https://github.com/kualico/kc-api</scm.url>
+                <scm.connection>scm:git:https://github.com/kualico/kc-api</scm.connection>
+                <scm.developerConnection>scm:git:https://github.com/kualico/kc-api</scm.developerConnection>
+                <scm.url>scm:git:https://github.com/kualico/kc-api</scm.url>
 
                 <issueManagement.system>github</issueManagement.system>
                 <issueManagement.url>https://github.com/kualico/kc-api/issues</issueManagement.url>
