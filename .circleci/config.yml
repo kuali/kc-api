@@ -19,6 +19,7 @@ jobs:
           name: Downloading Dependencies and Plugins
           command: |
             mvn -s .circleci/settings.xml de.qaware.maven:go-offline-maven-plugin:resolve-dependencies -Denforce-project-quality
+            mvn -s .circleci/settings.xml org.apache.maven.plugins:maven-dependency-plugin:go-offline -Denforce-project-quality
             mvn -s .circleci/settings.xml org.apache.maven.plugins:maven-dependency-plugin:resolve-plugins -Denforce-project-quality
       - save_cache:
           paths:
