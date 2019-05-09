@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-3679: attempting to make circle error message go away (#71)
+
+  * Travis Schneeberger on Thu, 9 May 2019 13:12:26 -0400 [View Commit](../../commit/4abc900bb94be344565d4759ebefc1fb1a03dfe2)
+
+## coeus-api-1905.0004
 * RESKC-3679: troubleshooting odd error message related to config version (#70)
 
   * Travis Schneeberger on Thu, 9 May 2019 12:41:59 -0400 [View Commit](../../commit/0e4168b6f18cd6f9924196c220dc05ff6b32dd0b)
