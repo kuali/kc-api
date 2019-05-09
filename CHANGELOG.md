@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-3679: troubleshooting odd error message related to config version (#70)
+
+  * Travis Schneeberger on Thu, 9 May 2019 12:41:59 -0400 [View Commit](../../commit/0e4168b6f18cd6f9924196c220dc05ff6b32dd0b)
+
+## coeus-api-1905.0003
 * RESKC-3679: adding another way to fetch deps just to be safe (#69)
 
   * Travis Schneeberger on Wed, 8 May 2019 14:34:09 -0400 [View Commit](../../commit/9ecc8cdcd530faee1fda7a37ec2ec5c5e3cb4a0c)
