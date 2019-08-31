@@ -1,6 +1,50 @@
 
 
 ## CURRENT
+* Bump license-maven-plugin from 1.20 to 2.0.0 (#80)
+
+  * Bumps [license-maven-plugin](https://github.com/mojohaus/license-maven-plugin) from 1.20 to 2.0.0.
+  * - [Release notes](https://github.com/mojohaus/license-maven-plugin/releases)
+  * - [Commits](https://github.com/mojohaus/license-maven-plugin/compare/license-maven-plugin-1.20...license-maven-plugin-2.0.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Sat, 31 Aug 2019 18:09:03 -0400 [View Commit](../../commit/0eeeeadb6b284f8e37abb56db28f7dd9158cbb15)
+* Bump maven-javadoc-plugin from 3.1.0 to 3.1.1 (#79)
+
+  * Bumps [maven-javadoc-plugin](https://github.com/apache/maven-javadoc-plugin) from 3.1.0 to 3.1.1.
+  * - [Release notes](https://github.com/apache/maven-javadoc-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-javadoc-plugin/compare/maven-javadoc-plugin-3.1.0...maven-javadoc-plugin-3.1.1)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Sat, 31 Aug 2019 18:08:13 -0400 [View Commit](../../commit/7d9a24cac2d412216f4b0dab232e7b00897c37d2)
+* Bump maven-site-plugin from 3.7.1 to 3.8.2 (#76)
+
+  * Bumps [maven-site-plugin](https://github.com/apache/maven-site-plugin) from 3.7.1 to 3.8.2.
+  * - [Release notes](https://github.com/apache/maven-site-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-site-plugin/compare/maven-site-plugin-3.7.1...maven-site-plugin-3.8.2)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Sat, 31 Aug 2019 18:07:07 -0400 [View Commit](../../commit/3b09c9f8662ca0ef6aafaefdda2eba6645ceaeb1)
+* Bump maven-jar-plugin from 3.1.1 to 3.1.2 (#78)
+
+  * Bumps [maven-jar-plugin](https://github.com/apache/maven-jar-plugin) from 3.1.1 to 3.1.2.
+  * - [Release notes](https://github.com/apache/maven-jar-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-jar-plugin/compare/maven-jar-plugin-3.1.1...maven-jar-plugin-3.1.2)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Sat, 31 Aug 2019 18:06:24 -0400 [View Commit](../../commit/d8ec079d894b3563af08bca43d84188beb69b227)
+* Bump junit-jupiter-engine from 5.4.2 to 5.5.1 (#77)
+
+  * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.4.2 to 5.5.1.
+  * - [Release notes](https://github.com/junit-team/junit5/releases)
+  * - [Commits](https://github.com/junit-team/junit5/compare/r5.4.2...r5.5.1)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Sat, 31 Aug 2019 18:06:14 -0400 [View Commit](../../commit/6c77cacbb251e101f3dc0c8d7398945d97bd78a8)
+* Bump maven-surefire-plugin from 2.22.1 to 2.22.2 (#75)
+
+  * Bumps [maven-surefire-plugin](https://github.com/apache/maven-surefire) from 2.22.1 to 2.22.2.
+  * - [Release notes](https://github.com/apache/maven-surefire/releases)
+  * - [Commits](https://github.com/apache/maven-surefire/compare/surefire-2.22.1...surefire-2.22.2)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Sat, 31 Aug 2019 18:06:02 -0400 [View Commit](../../commit/bb12443c556e392607a747ffb60fb25128ddead7)
+
+## coeus-api-1908.0002
 * Bump maven-source-plugin from 3.0.1 to 3.1.0 (#74)
 
   * Bumps [maven-source-plugin](https://github.com/apache/maven-source-plugin) from 3.0.1 to 3.1.0.
