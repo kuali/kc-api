@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-3927: adding dependabot (#72)
+
+  * Travis Schneeberger on Sat, 31 Aug 2019 17:54:47 -0400 [View Commit](../../commit/970c2405f06796b5b87ac7a9206e1371d88dd23a)
+
+## coeus-api-1905.0005
 * RESKC-3679: attempting to make circle error message go away (#71)
 
   * Travis Schneeberger on Thu, 9 May 2019 13:12:26 -0400 [View Commit](../../commit/4abc900bb94be344565d4759ebefc1fb1a03dfe2)
