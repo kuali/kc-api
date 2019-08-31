@@ -1,6 +1,15 @@
 
 
 ## CURRENT
+* Bump maven-source-plugin from 3.0.1 to 3.1.0 (#74)
+
+  * Bumps [maven-source-plugin](https://github.com/apache/maven-source-plugin) from 3.0.1 to 3.1.0.
+  * - [Release notes](https://github.com/apache/maven-source-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-source-plugin/compare/maven-source-plugin-3.0.1...maven-source-plugin-3.1.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Sat, 31 Aug 2019 18:04:28 -0400 [View Commit](../../commit/38ec91fc49c6d11f0d3d26149348bc8f1569da7e)
+
+## coeus-api-1908.0001
 * RESKC-3927: adding dependabot (#72)
 
   * Travis Schneeberger on Sat, 31 Aug 2019 17:54:47 -0400 [View Commit](../../commit/970c2405f06796b5b87ac7a9206e1371d88dd23a)
