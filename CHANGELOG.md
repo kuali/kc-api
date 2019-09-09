@@ -1,6 +1,15 @@
 
 
 ## CURRENT
+* Bump junit-jupiter-engine from 5.5.1 to 5.5.2 (#81)
+
+  * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.5.1 to 5.5.2.
+  * - [Release notes](https://github.com/junit-team/junit5/releases)
+  * - [Commits](https://github.com/junit-team/junit5/compare/r5.5.1...r5.5.2)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Mon, 9 Sep 2019 08:35:22 -0400 [View Commit](../../commit/10a0399604499ced936256971bf1c55acbee06d1)
+
+## coeus-api-1908.0003
 * Bump license-maven-plugin from 1.20 to 2.0.0 (#80)
 
   * Bumps [license-maven-plugin](https://github.com/mojohaus/license-maven-plugin) from 1.20 to 2.0.0.
