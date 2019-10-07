@@ -1,6 +1,15 @@
 
 
 ## CURRENT
+* Bump ossindex-maven-enforcer-rules from 3.0.4 to 3.1.0 (#82)
+
+  * Bumps [ossindex-maven-enforcer-rules](https://github.com/sonatype/ossindex-maven) from 3.0.4 to 3.1.0.
+  * - [Release notes](https://github.com/sonatype/ossindex-maven/releases)
+  * - [Commits](https://github.com/sonatype/ossindex-maven/compare/release-3.0.4...release-3.1.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Mon, 7 Oct 2019 09:06:00 -0400 [View Commit](../../commit/b6a651bf09b34f0cdc6fe636b7a1ace52ee90e50)
+
+## coeus-api-1909.0001
 * Bump junit-jupiter-engine from 5.5.1 to 5.5.2 (#81)
 
   * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.5.1 to 5.5.2.
