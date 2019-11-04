@@ -1,6 +1,15 @@
 
 
 ## CURRENT
+* Bump maven-jar-plugin from 3.1.2 to 3.2.0 (#84)
+
+  * Bumps [maven-jar-plugin](https://github.com/apache/maven-jar-plugin) from 3.1.2 to 3.2.0.
+  * - [Release notes](https://github.com/apache/maven-jar-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-jar-plugin/compare/maven-jar-plugin-3.1.2...maven-jar-plugin-3.2.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Mon, 4 Nov 2019 12:34:57 -0700 [View Commit](../../commit/4327067a939d10b202a3b5f57021c8f7920e441e)
+
+## coeus-api-1911.0001
 * Bump maven-source-plugin from 3.1.0 to 3.2.0 (#83)
 
   * Bumps [maven-source-plugin](https://github.com/apache/maven-source-plugin) from 3.1.0 to 3.2.0.
