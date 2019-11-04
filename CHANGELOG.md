@@ -1,6 +1,15 @@
 
 
 ## CURRENT
+* Bump maven-source-plugin from 3.1.0 to 3.2.0 (#83)
+
+  * Bumps [maven-source-plugin](https://github.com/apache/maven-source-plugin) from 3.1.0 to 3.2.0.
+  * - [Release notes](https://github.com/apache/maven-source-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-source-plugin/compare/maven-source-plugin-3.1.0...maven-source-plugin-3.2.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Mon, 4 Nov 2019 12:13:18 -0700 [View Commit](../../commit/b5f4a8956dbf2f4206985d3d4c509dcbff167e1e)
+
+## coeus-api-1910.0001
 * Bump ossindex-maven-enforcer-rules from 3.0.4 to 3.1.0 (#82)
 
   * Bumps [ossindex-maven-enforcer-rules](https://github.com/sonatype/ossindex-maven) from 3.0.4 to 3.1.0.
