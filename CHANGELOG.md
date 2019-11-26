@@ -1,6 +1,23 @@
 
 
 ## CURRENT
+* Bump maven-enforcer-plugin from 3.0.0-M2 to 3.0.0-M3 (#87)
+
+  * Bumps [maven-enforcer-plugin](https://github.com/apache/maven-enforcer) from 3.0.0-M2 to 3.0.0-M3.
+  * - [Release notes](https://github.com/apache/maven-enforcer/releases)
+  * - [Commits](https://github.com/apache/maven-enforcer/compare/enforcer-3.0.0-M2...enforcer-3.0.0-M3)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Tue, 26 Nov 2019 10:49:57 -0500 [View Commit](../../commit/18521c9d8a1b1bbf2f845bd2732b885f3733c3c1)
+* Bump go-offline-maven-plugin from 1.1.0 to 1.2.3 (#86)
+
+  * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.1.0 to 1.2.3.
+  * - [Release notes](https://github.com/qaware/go-offline-maven-plugin/releases)
+  * - [Changelog](https://github.com/qaware/go-offline-maven-plugin/blob/master/Changelog.md)
+  * - [Commits](https://github.com/qaware/go-offline-maven-plugin/compare/1.1.0...1.2.3)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Tue, 26 Nov 2019 10:49:49 -0500 [View Commit](../../commit/efa19e120415b2507633251f7dad480cf991a919)
+
+## coeus-api-1911.0002
 * Bump maven-jar-plugin from 3.1.2 to 3.2.0 (#84)
 
   * Bumps [maven-jar-plugin](https://github.com/apache/maven-jar-plugin) from 3.1.2 to 3.2.0.
