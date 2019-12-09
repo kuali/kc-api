@@ -13,11 +13,9 @@
 
 package org.kuali.coeus.common.api.sponsor.hierarchy;
         
-        
 public interface SponsorHierarchyService {
     
     String SPONSOR_HIERARCHY_NIH_MULT_PI = "NIH Multiple PI";
-    String SPONSOR_HIERARCHY_NIH_OSC = "NIH Other Significant Contributor";
     
     /**
       * Checks if a given sponsor is in the hierarchy for a specific level.
@@ -53,6 +51,8 @@ public interface SponsorHierarchyService {
       * @param sponsorCode the sponsor code.  Cannot be blank.
       * @return returns true if the sponsor code is a "NIH Other Significant Contributor" type
       * @throws IllegalArgumentException if the sponsorCode is blank
+      * @deprecated This is probably not used anymore.  To check if a sponsor is NIH call {@link #isSponsorNihMultiplePi(String)}
       */
+    @Deprecated
     boolean isSponsorNihOsc(String sponsorCode);
 }
