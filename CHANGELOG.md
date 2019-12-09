@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-4183: deprecating legacy NIH method (#88)
+
+  * Travis Schneeberger on Mon, 9 Dec 2019 11:18:52 -0500 [View Commit](../../commit/d0157ce54d85d314e44bcbd52e69a94775344376)
+
+## coeus-api-1911.0003
 * Bump maven-enforcer-plugin from 3.0.0-M2 to 3.0.0-M3 (#87)
 
   * Bumps [maven-enforcer-plugin](https://github.com/apache/maven-enforcer) from 3.0.0-M2 to 3.0.0-M3.
