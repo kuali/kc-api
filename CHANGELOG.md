@@ -1,6 +1,16 @@
 
 
 ## CURRENT
+* Bump go-offline-maven-plugin from 1.2.3 to 1.2.4 (#89)
+
+  * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.2.3 to 1.2.4.
+  * - [Release notes](https://github.com/qaware/go-offline-maven-plugin/releases)
+  * - [Changelog](https://github.com/qaware/go-offline-maven-plugin/blob/master/Changelog.md)
+  * - [Commits](https://github.com/qaware/go-offline-maven-plugin/compare/1.2.3...1.2.4)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Tue, 17 Dec 2019 15:54:53 -0500 [View Commit](../../commit/fd3266554c97a6d0d538049746b08fc9a443d49e)
+
+## coeus-api-1912.0001
 * RESKC-4183: deprecating legacy NIH method (#88)
 
   * Travis Schneeberger on Mon, 9 Dec 2019 11:18:52 -0500 [View Commit](../../commit/d0157ce54d85d314e44bcbd52e69a94775344376)
