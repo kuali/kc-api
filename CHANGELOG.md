@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-4094: Adding phs hierarchy check to interface (#91)
+
+  * Joe Wiggins on Mon, 23 Dec 2019 09:54:43 -0700 [View Commit](../../commit/625fedc3bed64716bbe06bc6b307d118cf629a0d)
+
+## coeus-api-1912.0002
 * Bump go-offline-maven-plugin from 1.2.3 to 1.2.4 (#89)
 
   * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.2.3 to 1.2.4.
