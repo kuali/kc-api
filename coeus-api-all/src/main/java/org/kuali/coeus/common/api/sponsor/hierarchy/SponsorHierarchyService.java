@@ -16,7 +16,8 @@ package org.kuali.coeus.common.api.sponsor.hierarchy;
 public interface SponsorHierarchyService {
     
     String SPONSOR_HIERARCHY_NIH_MULT_PI = "NIH Multiple PI";
-    
+    String SPONSOR_HIERARCHY_KCOI_PHS = "KCOI PHS";
+
     /**
       * Checks if a given sponsor is in the hierarchy for a specific level.
       * @param sponsorCode the sponsor code.  Cannot be blank.
@@ -55,4 +56,12 @@ public interface SponsorHierarchyService {
       */
     @Deprecated
     boolean isSponsorNihOsc(String sponsorCode);
+
+    /**
+     * Check if a given sponsor is in the KCOI PHS hierarchy for any level.
+     * @param sponsorCode the sponsor code.  Cannot be blank.
+     * @return returns true if the sponsor code is a "KCOI PHS" type
+     * @throws IllegalArgumentException if the sponsorCode is blank
+     */
+    boolean isSponsorKcoiPhs(String sponsorCode);
 }
