@@ -19,4 +19,5 @@ import org.kuali.coeus.sys.api.model.Named;
 public interface StateContract extends Coded, Named {
 
     String getCountryCode();
+    String getNameV3();
 }
