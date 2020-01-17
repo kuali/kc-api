@@ -13,6 +13,7 @@
 
 package org.kuali.coeus.propdev.api.person;
 
+import org.kuali.coeus.common.api.address.Addressable;
 import org.kuali.coeus.common.api.person.KcPersonContract;
 import org.kuali.coeus.common.api.person.attr.CitizenshipTypeContract;
 import org.kuali.coeus.propdev.api.hierarchy.HierarchicalProposal;
@@ -22,7 +23,7 @@ import org.kuali.coeus.sys.api.model.ScaleTwoDecimal;
 import java.util.Date;
 import java.util.List;
 
-public interface ProposalPersonContract extends ProposalPersonLink, HierarchicalProposal {
+public interface ProposalPersonContract extends Addressable, ProposalPersonLink, HierarchicalProposal {
     
     boolean getConflictOfInterestFlag();
 
@@ -141,23 +142,7 @@ public interface ProposalPersonContract extends ProposalPersonLink, Hierarchical
     String getIdProvided();
     
     String getIdVerified();
-    
-    String getAddressLine1();
-    
-    String getAddressLine2();
-    
-    String getAddressLine3();
-    
-    String getCity();
-    
-    String getCounty();
-    
-    String getState();
-    
-    String getPostalCode();
-    
-    String getCountryCode();
-    
+
     String getFaxNumber();
     
     String getPagerNumber();
@@ -193,4 +178,5 @@ public interface ProposalPersonContract extends ProposalPersonLink, Hierarchical
     boolean isMultiplePi();
 
     KcPersonContract getPerson();
+
 }

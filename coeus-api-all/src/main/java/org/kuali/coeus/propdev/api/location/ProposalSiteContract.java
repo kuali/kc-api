@@ -13,13 +13,14 @@
 
 package org.kuali.coeus.propdev.api.location;
 
+import org.kuali.coeus.common.api.address.Addressable;
 import org.kuali.coeus.common.api.org.OrganizationContract;
 import org.kuali.coeus.common.api.rolodex.RolodexContract;
 import org.kuali.coeus.propdev.api.core.NumberedProposal;
 
 import java.util.List;
 
-public interface ProposalSiteContract extends NumberedProposal {
+public interface ProposalSiteContract extends NumberedProposal, Addressable {
 
     Integer getSiteNumber();
 
@@ -35,19 +36,4 @@ public interface ProposalSiteContract extends NumberedProposal {
 
     String getFirstCongressionalDistrictName();
 
-    String getAddressLine1();
-
-    String getAddressLine2();
-
-    String getAddressLine3();
-
-    String getCity();
-
-    String getCounty();
-
-    String getState();
-
-    String getPostalCode();
-
-    String getCountryCode();
 }
