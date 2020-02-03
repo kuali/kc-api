@@ -1,6 +1,16 @@
 
 
 ## CURRENT
+* Bump go-offline-maven-plugin from 1.2.4 to 1.2.5 (#95)
+
+  * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.2.4 to 1.2.5.
+  * - [Release notes](https://github.com/qaware/go-offline-maven-plugin/releases)
+  * - [Changelog](https://github.com/qaware/go-offline-maven-plugin/blob/master/Changelog.md)
+  * - [Commits](https://github.com/qaware/go-offline-maven-plugin/compare/1.2.4...1.2.5)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>  * dependabot-preview[bot] on Mon, 3 Feb 2020 13:42:15 -0500 [View Commit](../../commit/c2c4d498e3111c6815ce860312d2fe9679d8c298)
+
+## coeus-api-2001.0003
 * Bump junit-jupiter-engine from 5.5.2 to 5.6.0 (#94)
 
   * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.5.2 to 5.6.0.
