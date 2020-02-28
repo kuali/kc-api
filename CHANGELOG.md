@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-4310: Added job to update year-old code to release license and push to OSS repo (#96)
+
+  * Jeff Largent on Fri, 28 Feb 2020 09:48:10 -0500 [View Commit](../../commit/319eaaa568c9643052a91df23cf110aef809bb47)
+
+## coeus-api-2002.0001
 * Bump go-offline-maven-plugin from 1.2.4 to 1.2.5 (#95)
 
   * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.2.4 to 1.2.5.
