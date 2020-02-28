@@ -53,3 +53,32 @@ jobs:
               # cannot use offline mode for the release plugin
               mvn -B -s .circleci/settings.xml clean -DskipTests -Darguments=-DskipTests release:prepare release:perform -DreleaseVersion=${RELEASE_VERSION} -DscmCommentPrefix="[maven-release-plugin] [skip ci] #norelease " -Dusername=${GITHUB_AUTHTOKEN}
             fi
+  push_oss_code:
+    working_directory: ~/kc-api
+    docker:
+      - image: circleci/openjdk:11-jdk-browsers
+    steps:
+      - checkout
+      - run:
+          name: Update headers and license.txt to release license
+          command: |
+            git config --global user.email "${GIT_USER_EMAIL}"
+            git config --global user.name "${GIT_USER_NAME}"
+            git clone https://${GITHUB_AUTHTOKEN}@github.com/KualiCo/research-scripts ../research-scripts
+            REPO_NAME=$CIRCLE_PROJECT_REPONAME sh ../research-scripts/push_relicensed_release.sh
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+  push_oss_code:
+    triggers:
+      - schedule:
+          cron: '0 6 * * *'
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - push_oss_code
