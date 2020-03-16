@@ -1,6 +1,35 @@
 
 
 ## CURRENT
+* Bump maven-site-plugin from 3.8.2 to 3.9.0 (#99)
+
+  * Bumps [maven-site-plugin](https://github.com/apache/maven-site-plugin) from 3.8.2 to 3.9.0.
+  * - [Release notes](https://github.com/apache/maven-site-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-site-plugin/compare/maven-site-plugin-3.8.2...maven-site-plugin-3.9.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Mon, 16 Mar 2020 09:40:48 -0400 [View Commit](../../commit/f619886b3d861493d0d5b1e3dd7f770b880828b3)
+* Bump maven-javadoc-plugin from 3.1.1 to 3.2.0 (#98)
+
+  * Bumps [maven-javadoc-plugin](https://github.com/apache/maven-javadoc-plugin) from 3.1.1 to 3.2.0.
+  * - [Release notes](https://github.com/apache/maven-javadoc-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-javadoc-plugin/compare/maven-javadoc-plugin-3.1.1...maven-javadoc-plugin-3.2.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Mon, 16 Mar 2020 09:40:40 -0400 [View Commit](../../commit/4f9629ef1d21a368821b1a9cbc9c278cd017379b)
+* Bump maven-dependency-plugin from 3.1.1 to 3.1.2 (#97)
+
+  * Bumps [maven-dependency-plugin](https://github.com/apache/maven-dependency-plugin) from 3.1.1 to 3.1.2.
+  * - [Release notes](https://github.com/apache/maven-dependency-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-dependency-plugin/compare/maven-dependency-plugin-3.1.1...maven-dependency-plugin-3.1.2)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Mon, 16 Mar 2020 09:40:30 -0400 [View Commit](../../commit/5c9992667e9c08def7e33af48e7a70ed3cb4d5df)
+
+## coeus-api-2002.0002
 * RESKC-4310: Added job to update year-old code to release license and push to OSS repo (#96)
 
   * Jeff Largent on Fri, 28 Feb 2020 09:48:10 -0500 [View Commit](../../commit/319eaaa568c9643052a91df23cf110aef809bb47)
