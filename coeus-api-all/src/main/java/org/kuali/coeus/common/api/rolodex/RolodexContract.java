@@ -13,9 +13,10 @@
 
 package org.kuali.coeus.common.api.rolodex;
 
+import org.kuali.coeus.common.api.address.Addressable;
 import org.kuali.coeus.sys.api.model.Inactivatable;
 
-public interface RolodexContract extends Inactivatable {
+public interface RolodexContract extends Inactivatable, Addressable {
     
     Integer getRolodexId();
 

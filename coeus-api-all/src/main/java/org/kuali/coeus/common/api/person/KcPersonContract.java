@@ -13,10 +13,11 @@
 
 package org.kuali.coeus.common.api.person;
 
+import org.kuali.coeus.common.api.address.Addressable;
 import org.kuali.coeus.common.api.unit.UnitContract;
 import org.kuali.coeus.sys.api.model.Inactivatable;
 
-public interface KcPersonContract extends Inactivatable {
+public interface KcPersonContract extends Inactivatable, Addressable {
 
     String getPersonId(); 
 
