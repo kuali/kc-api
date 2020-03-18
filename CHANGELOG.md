@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-4070: Add fileDataId to KcFile contract
+
+  * Joe Wiggins on Wed, 18 Mar 2020 15:51:53 -0600 [View Commit](../../commit/8175ad2f6026ce31c702db65bf5ff0a251ae6061)
+
+## coeus-api-2003.0001
 * Bump maven-site-plugin from 3.8.2 to 3.9.0 (#99)
 
   * Bumps [maven-site-plugin](https://github.com/apache/maven-site-plugin) from 3.8.2 to 3.9.0.
