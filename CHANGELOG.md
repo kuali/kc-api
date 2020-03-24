@@ -1,6 +1,17 @@
 
 
 ## CURRENT
+* Bump junit-jupiter-engine from 5.6.0 to 5.6.1 (#101)
+
+  * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.6.0 to 5.6.1.
+  * - [Release notes](https://github.com/junit-team/junit5/releases)
+  * - [Commits](https://github.com/junit-team/junit5/compare/r5.6.0...r5.6.1)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Tue, 24 Mar 2020 10:23:47 -0400 [View Commit](../../commit/4f0f3383ee91d778d90e56da65917b6c06836ec5)
+
+## coeus-api-2003.0002
 * RESKC-4070: Add fileDataId to KcFile contract
 
   * Joe Wiggins on Wed, 18 Mar 2020 15:51:53 -0600 [View Commit](../../commit/8175ad2f6026ce31c702db65bf5ff0a251ae6061)
