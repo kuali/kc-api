@@ -1,6 +1,17 @@
 
 
 ## CURRENT
+* Bump junit-jupiter-engine from 5.6.1 to 5.6.2 (#102)
+
+  * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.6.1 to 5.6.2.
+  * - [Release notes](https://github.com/junit-team/junit5/releases)
+  * - [Commits](https://github.com/junit-team/junit5/compare/r5.6.1...r5.6.2)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Mon, 13 Apr 2020 13:33:53 -0400 [View Commit](../../commit/35dfb6e5e0aef651135fccb4d5aef9be0945910f)
+
+## coeus-api-2003.0003
 * Bump junit-jupiter-engine from 5.6.0 to 5.6.1 (#101)
 
   * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.6.0 to 5.6.1.
