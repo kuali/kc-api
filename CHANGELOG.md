@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-4033: Adding UEI to OrganizationContract (#103)
+
+  * Travis Schneeberger on Thu, 16 Apr 2020 12:21:21 -0400 [View Commit](../../commit/b12a964f314a55b40e08a1dd8db732272d6ddce3)
+
+## coeus-api-2004.0001
 * Bump junit-jupiter-engine from 5.6.1 to 5.6.2 (#102)
 
   * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.6.1 to 5.6.2.
