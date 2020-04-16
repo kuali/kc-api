@@ -53,6 +53,11 @@ public interface OrganizationContract {
 
     String getDunsPlusFourNumber();
 
+    /**
+     * The Unique Entity ID.
+     */
+    String getUei();
+
     String getFederalEmployerId();
 
     String getHumanSubAssurance();
