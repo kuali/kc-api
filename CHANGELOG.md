@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-3920: update dependencies in preparation for tomcat 9 testing (#104)
+
+  * Travis Schneeberger on Mon, 1 Jun 2020 11:12:43 -0400 [View Commit](../../commit/1e94b3e0ed2cca9d30e9c8558ee0d4a04cdf51a5)
+
+## coeus-api-2004.0002
 * RESKC-4033: Adding UEI to OrganizationContract (#103)
 
   * Travis Schneeberger on Thu, 16 Apr 2020 12:21:21 -0400 [View Commit](../../commit/b12a964f314a55b40e08a1dd8db732272d6ddce3)
