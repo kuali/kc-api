@@ -1,6 +1,17 @@
 
 
 ## CURRENT
+* Bump maven-site-plugin from 3.9.0 to 3.9.1 (#105)
+
+  * Bumps [maven-site-plugin](https://github.com/apache/maven-site-plugin) from 3.9.0 to 3.9.1.
+  * - [Release notes](https://github.com/apache/maven-site-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-site-plugin/compare/maven-site-plugin-3.9.0...maven-site-plugin-3.9.1)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Thu, 25 Jun 2020 11:12:31 -0400 [View Commit](../../commit/b00600d1c04d6a7d8f74414594b3217a6a64c9ce)
+
+## coeus-api-2006.0001
 * RESKC-3920: update dependencies in preparation for tomcat 9 testing (#104)
 
   * Travis Schneeberger on Mon, 1 Jun 2020 11:12:43 -0400 [View Commit](../../commit/1e94b3e0ed2cca9d30e9c8558ee0d4a04cdf51a5)
