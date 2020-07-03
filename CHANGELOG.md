@@ -1,6 +1,17 @@
 
 
 ## CURRENT
+* Bump extra-enforcer-rules from 1.2 to 1.3 (#106)
+
+  * Bumps [extra-enforcer-rules](https://github.com/mojohaus/extra-enforcer-rules) from 1.2 to 1.3.
+  * - [Release notes](https://github.com/mojohaus/extra-enforcer-rules/releases)
+  * - [Commits](https://github.com/mojohaus/extra-enforcer-rules/compare/extra-enforcer-rules-1.2...extra-enforcer-rules-1.3)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Fri, 3 Jul 2020 10:57:52 -0400 [View Commit](../../commit/d73c6b807aa88d349f1b53d5a5f2ff8bd7f71b7c)
+
+## coeus-api-2006.0002
 * Bump maven-site-plugin from 3.9.0 to 3.9.1 (#105)
 
   * Bumps [maven-site-plugin](https://github.com/apache/maven-site-plugin) from 3.9.0 to 3.9.1.
