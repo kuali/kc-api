@@ -1,6 +1,17 @@
 
 
 ## CURRENT
+* Bump maven-resources-plugin from 3.1.0 to 3.2.0 (#109)
+
+  * Bumps [maven-resources-plugin](https://github.com/apache/maven-resources-plugin) from 3.1.0 to 3.2.0.
+  * - [Release notes](https://github.com/apache/maven-resources-plugin/releases)
+  * - [Commits](https://github.com/apache/maven-resources-plugin/compare/maven-resources-plugin-3.1.0...maven-resources-plugin-3.2.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Wed, 12 Aug 2020 10:47:10 -0400 [View Commit](../../commit/8531b73cdc546e4619350a65988eff0f012521c8)
+
+## coeus-api-2007.0001
 * Bump extra-enforcer-rules from 1.2 to 1.3 (#106)
 
   * Bumps [extra-enforcer-rules](https://github.com/mojohaus/extra-enforcer-rules) from 1.2 to 1.3.
