@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.kuali.coeus</groupId>
         <artifactId>coeus-api</artifactId>
-        <version>2008.0002</version>
+        <version>2008.0003-SNAPSHOT</version>
     </parent>
     <artifactId>coeus-api-all</artifactId>
     
