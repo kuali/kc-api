@@ -1,6 +1,18 @@
 
 
 ## CURRENT
+* Bump go-offline-maven-plugin from 1.2.5 to 1.2.6 (#110)
+
+  * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.2.5 to 1.2.6.
+  * - [Release notes](https://github.com/qaware/go-offline-maven-plugin/releases)
+  * - [Changelog](https://github.com/qaware/go-offline-maven-plugin/blob/master/Changelog.md)
+  * - [Commits](https://github.com/qaware/go-offline-maven-plugin/commits)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Mon, 31 Aug 2020 13:41:47 -0400 [View Commit](../../commit/ba6a37f630e6fcf02a14bcd43d013730437ad15a)
+
+## coeus-api-2008.0001
 * Bump maven-resources-plugin from 3.1.0 to 3.2.0 (#109)
 
   * Bumps [maven-resources-plugin](https://github.com/apache/maven-resources-plugin) from 3.1.0 to 3.2.0.
