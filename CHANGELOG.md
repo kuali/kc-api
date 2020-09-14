@@ -1,6 +1,17 @@
 
 
 ## CURRENT
+* Bump junit-jupiter-engine from 5.6.2 to 5.7.0 (#111)
+
+  * Bumps [junit-jupiter-engine](https://github.com/junit-team/junit5) from 5.6.2 to 5.7.0.
+  * - [Release notes](https://github.com/junit-team/junit5/releases)
+  * - [Commits](https://github.com/junit-team/junit5/compare/r5.6.2...r5.7.0)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Mon, 14 Sep 2020 07:41:55 -0400 [View Commit](../../commit/dfedfd31330682d6b9434ee4f7d47daaf29cee3c)
+
+## coeus-api-2008.0002
 * Bump go-offline-maven-plugin from 1.2.5 to 1.2.6 (#110)
 
   * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.2.5 to 1.2.6.
