@@ -1,15 +1,15 @@
-version: 2
+version: 2.1
 jobs:
   build:
     working_directory: ~/kc-api
     docker:
-      - image: circleci/openjdk:11-jdk-browsers
+      - image: cimg/openjdk:11.0
     steps:
       - checkout
       - run:
           name: Normalizing pom.xml for Cache Key
           command: |
-            sudo apt-get install xmlstarlet
+            sudo apt-get update && sudo apt-get install -y xmlstarlet
             mkdir target
             # we need to strip out the version number before hashing the pom.xml because each time we do a release the version increments even if the dependencies are the same
             xmlstarlet ed -N pom=http://maven.apache.org/POM/4.0.0 -u "/pom:project/pom:version" -v CACHE-VERSION pom.xml > target/pom.xml.cache
