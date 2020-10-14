@@ -1,6 +1,13 @@
 
 
 ## CURRENT
+* RESKC-4837: updating circleci image (#113)
+
+* RESKC-4837: updating circleci image
+  * 
+* RESKC-4837: updating circleci image  * Travis Schneeberger on Wed, 14 Oct 2020 08:28:22 -0400 [View Commit](../../commit/6e29008aba877322921d768b17bbcb5fcc0c5541)
+
+## coeus-api-2010.0001
 * Bump go-offline-maven-plugin from 1.2.6 to 1.2.7 (#112)
 
   * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.2.6 to 1.2.7.
