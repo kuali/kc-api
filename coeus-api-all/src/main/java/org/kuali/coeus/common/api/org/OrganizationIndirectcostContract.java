@@ -41,4 +41,6 @@ public interface OrganizationIndirectcostContract {
 
     String getRestrictedRatePolicy();
 
+    String getTrainingRatePolicy();
+
 }
