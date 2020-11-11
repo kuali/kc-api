@@ -1,6 +1,11 @@
 
 
 ## CURRENT
+* RESKC-4811: Added training rate policy to org idc contract (#115)
+
+  * Jeff Largent on Wed, 11 Nov 2020 09:25:59 -0500 [View Commit](../../commit/81af9e066835d53443939b5f82466568661644d6)
+
+## coeus-api-2010.0002
 * RESKC-4837: updating circleci image (#113)
 
 * RESKC-4837: updating circleci image
