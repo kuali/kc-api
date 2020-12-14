@@ -1,6 +1,18 @@
 
 
 ## CURRENT
+* Bump go-offline-maven-plugin from 1.2.7 to 1.2.8 (#119)
+
+  * Bumps [go-offline-maven-plugin](https://github.com/qaware/go-offline-maven-plugin) from 1.2.7 to 1.2.8.
+  * - [Release notes](https://github.com/qaware/go-offline-maven-plugin/releases)
+  * - [Changelog](https://github.com/qaware/go-offline-maven-plugin/blob/master/Changelog.md)
+  * - [Commits](https://github.com/qaware/go-offline-maven-plugin/commits)
+  * 
+  * Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+  * 
+  * Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>  * dependabot-preview[bot] on Mon, 14 Dec 2020 09:22:12 -0500 [View Commit](../../commit/ce0ae36cd271942d2c0cedc2626fc487edd429f6)
+
+## coeus-api-2011.0001
 * RESKC-4811: Added training rate policy to org idc contract (#115)
 
   * Jeff Largent on Wed, 11 Nov 2020 09:25:59 -0500 [View Commit](../../commit/81af9e066835d53443939b5f82466568661644d6)
