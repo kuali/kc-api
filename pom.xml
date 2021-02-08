@@ -17,7 +17,7 @@
 
     <properties>
 
-        <junit.version>5.7.0</junit.version>
+        <junit.version>5.7.1</junit.version>
 
         <error_prone_core.version>2.4.0</error_prone_core.version>
         <go-offline-maven-plugin.version>1.2.8</go-offline-maven-plugin.version>
